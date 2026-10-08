@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to price 3D prints · StarlitDesk</title>
+<meta name="description" content="Cost filament per gram, turn your printer into a cost per print hour, spread failed prints over the good ones, add your time and price so your margin survives the fees. Worked example included.">
+<link rel="canonical" href="https://starlitdesk.github.io/guides/how-to-price-3d-prints.html">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2421;--muted:#5d665f;--line:#dcdfd9;--accent:#35614a;--soft:#eef2ec}
+@media (prefers-color-scheme:dark){:root{--bg:#161a17;--fg:#e5e9e5;--muted:#a3ada5;--line:#333b35;--accent:#8fc5a2;--soft:#1f2621}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 Georgia,"Times New Roman",serif}
+.wrap{max-width:42rem;margin:0 auto;padding:24px 16px 48px}
+header.site,footer.site{font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+header.site a{color:var(--fg);font-weight:600;text-decoration:none}
+nav.crumbs{font:14px system-ui,sans-serif;color:var(--muted);margin:1.5rem 0 .5rem}
+nav.crumbs a{color:var(--muted)}
+h1{font-size:1.9rem;line-height:1.2;margin:.3rem 0 1rem}
+h2{font-size:1.25rem;line-height:1.3;margin:2rem 0 .4rem}
+.lede{font-size:1.08rem}
+code{font:.88em ui-monospace,"SFMono-Regular",Menlo,monospace;background:var(--soft);padding:.05em .3em;border-radius:3px}
+.formula code{display:inline-block;padding:.4rem .6rem;white-space:normal}
+table{border-collapse:collapse;width:100%;font:15px/1.45 system-ui,sans-serif;margin:.6rem 0}
+th,td{border-bottom:1px solid var(--line);padding:.4rem .45rem;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{font-weight:700}
+.small{font:14px system-ui,sans-serif;color:var(--muted)}
+aside.product{background:var(--soft);border-radius:8px;padding:.4rem 1.1rem 1rem;margin:2rem 0}
+a{color:var(--accent)}
+a.cta{font:600 16px system-ui,sans-serif}
+.scope,.ai{font:14px/1.5 system-ui,sans-serif;color:var(--muted)}
+.scope{border-left:3px solid var(--line);padding-left:.8rem}
+footer.site{border-top:1px solid var(--line);margin-top:2.5rem;padding-top:1rem}
+ul.guides{padding-left:1.1rem} ul.guides li{margin:.8rem 0}
+@media print{body{font-size:11.5pt;background:#fff;color:#000}.wrap{max-width:none;padding:0}aside.product{background:#f1f4ef}h2{break-after:avoid}table,aside{break-inside:avoid}a{color:#2b5a40}}
+</style></head>
+<body><div class="wrap">
+<header class="site"><a href="/">StarlitDesk</a> · Spreadsheet tools for handmade sellers</header>
+<nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a></nav>
+<main><article>
+<h1>How to price 3D prints: filament, machine time and failed prints, not just grams</h1>
+<p class="lede">Pricing 3D prints by weight is quick: grams times a rate, done. It is also how many print shops end up busy and barely profitable, because a part's cost is not only filament. Printer time, power, worn nozzles, failed prints, setup and finishing all count. This guide shows a method that adds them up for any part, with a worked example.</p>
+
+<h2>1. Filament: cost per gram from the spool</h2>
+<p>Take the spool price and the net filament weight on the label:</p>
+<p class="formula"><code>cost per gram = spool price ÷ grams on the spool</code></p>
+<p>Then use the part weight your slicer reports, <em>including supports, brim and purge</em>. Supports you snap off and throw away were still bought.</p>
+
+<h2>2. Machine time: a cost per print hour</h2>
+<p>Your printer wears out, uses power and eats parts. Turn that into an hourly rate:</p>
+<ul>
+<li><strong>Depreciation:</strong> printer price ÷ the print hours you expect it to last (your own estimate).</li>
+<li><strong>Power:</strong> average draw in kW × your electricity price per kWh. Average draw is far below the power supply's rating once the bed is heated; a plug-in meter tells you yours.</li>
+<li><strong>Maintenance:</strong> nozzles, build plates, belts and so on, spread per hour.</li>
+</ul>
+<p>Add the three, then multiply by the print hours per plate from your slicer. If a plate holds several parts, divide by the parts per plate.</p>
+
+<h2>3. Failed prints are a cost, not bad luck</h2>
+<p>Every shop has failures: warping, spaghetti, layer shifts, a print knocked off the bed. If one plate in ten fails, each good part has to carry the filament and machine time of the failed ones:</p>
+<p class="formula"><code>cost per good part = (filament + machine time) ÷ (1 − failure rate)</code></p>
+<p>Use your real failure rate from the last few weeks. New materials and tall, thin parts usually fail more. If a failure also costs you setup time, add that too.</p>
+
+<h2>4. Your time, packaging and overhead</h2>
+<p>Printing runs on its own, but slicing, starting a plate, removing supports, sanding and packing do not. Time setup per plate and finishing per part, and pay yourself an hourly rate you would accept. Add packaging and a small allowance for overhead such as tools, glue, software and spare parts.</p>
+
+<h2>5. Price so your margin survives the fees</h2>
+<p>Selling fees are usually a percentage of the sale plus a fixed amount per order. To keep the margin you want <em>after</em> fees:</p>
+<p class="formula"><code>price = (cost per part + fixed fee per order) ÷ (1 − fee % − target margin %)</code></p>
+
+<h2>Worked example: a PLA desk organiser</h2>
+<p class="small">Illustrative numbers only. Printer price, life, power, maintenance and failure rate are example values: use your own.</p>
+<table>
+<tr><th>Machine rate</th><th>Basis</th><th class="n">Per hour</th></tr>
+<tr><td>Depreciation</td><td>$600 printer ÷ 3,000 print hours</td><td class="n">$0.2000</td></tr>
+<tr><td>Power</td><td>0.12 kW average × $0.17 per kWh</td><td class="n">$0.0204</td></tr>
+<tr><td>Maintenance</td><td>allowance</td><td class="n">$0.1000</td></tr>
+<tr class="total"><td>Machine rate</td><td></td><td class="n">$0.3204</td></tr>
+</table>
+<table>
+<tr><th>Item</th><th>Basis</th><th class="n">Per part</th></tr>
+<tr><td>Filament</td><td>120 g incl. supports at $20 per 1,000 g</td><td class="n">$2.40</td></tr>
+<tr><td>Machine time</td><td>6 h × $0.3204</td><td class="n">$1.92</td></tr>
+<tr><td>Failed-print allowance</td><td>10% failure rate: $4.32 ÷ 0.9 − $4.32</td><td class="n">$0.48</td></tr>
+<tr><td>Labour</td><td>10 min setup + 15 min finishing at $18/h</td><td class="n">$7.50</td></tr>
+<tr><td>Packaging</td><td>box and padding</td><td class="n">$0.80</td></tr>
+<tr><td>Overhead</td><td>flat allowance</td><td class="n">$0.50</td></tr>
+<tr class="total"><td>Total cost</td><td></td><td class="n">$13.60</td></tr>
+</table>
+<p>With an example fee of 9.5% plus $0.45 per order and a 30% target margin: <code>(13.60 + 0.45) ÷ (1 − 0.095 − 0.30) = $23.23</code>. Rounded up to $24, the organiser keeps $7.67 after fees and costs, a 32% margin, while paying you $18 an hour for the 25 minutes of hands-on work.</p>
+<p>Now the per-gram shortcut: at $0.10 a gram, 120 g comes to $12.00. After $1.59 in fees and $13.60 in costs, that sale loses $3.19. Even counting your time as free, it leaves only $4.31 for 25 minutes of work. The filament was the smallest part of the problem.</p>
+
+<h2>6. Small parts: fill the plate, mind the order fee</h2>
+<p>For small parts, printing many to a plate changes everything. In the example's set-up, 20 keychains of 8 g each on a 5-hour plate with a 5% failure rate cost about $0.25 each in filament, machine time and failures, plus about $0.75 of labour (setup spread over 20, plus 2 minutes of finishing each). At that size the fixed fee per order matters more than the plastic, so small items usually sell better in sets or as add-ons than one at a time.</p>
+
+<h2>7. Check each product and re-check often</h2>
+<p>Run the same calculation for every product and sort by margin: big, slow, support-heavy parts are often the ones losing money. Re-check when filament prices move, when you change material, and when your failure rate changes. In a spreadsheet, that is a few minutes.</p>
+
+<aside class="product">
+<h2>A spreadsheet that does this for you</h2>
+<p>We make a 3D Print Pricing &amp; Profit Workbook that follows this method: spools to cost per gram, a printer block to cost per print hour, jobs with parts per plate, failure rate, setup and finishing time, a suggested price at your margin and what you keep after fees. It is tested in LibreOffice Calc.</p>
+<p><a class="cta" href="https://www.etsy.com/listing/4590550289/3d-print-pricing-calculator-spreadsheet">See the 3D Print Pricing &amp; Profit Workbook</a></p>
+</aside>
+
+<p class="scope">This guide covers costing only. Print only models you designed or whose licence allows selling prints; logos, characters and brand names need the owner's permission. Printer safety and ventilation are not covered: follow your printer maker's guidance. It is not tax, legal or financial advice.</p>
+
+<p class="ai">Written with AI tools (Anthropic's Claude) by StarlitDesk and checked by us; the worked example was calculated and checked before publishing.</p>
+</article></main>
+<footer class="site"><p><a href="/guides/">More guides</a> · <a href="/privacy.html">Privacy policy</a></p><p>Our product images are partly made with AI tools.</p><p>© 2026 StarlitDesk</p></footer>
+</div></body></html>

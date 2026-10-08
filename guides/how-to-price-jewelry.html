@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to price jewelry when metal prices move · StarlitDesk</title>
+<meta name="description" content="Cost each piece from the metal you actually use, including workshop loss, add findings, packaging and your time, price for your margin after fees, and work out the metal price at which each piece needs a new price. Worked example included.">
+<link rel="canonical" href="https://starlitdesk.github.io/guides/how-to-price-jewelry.html">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2421;--muted:#5d665f;--line:#dcdfd9;--accent:#35614a;--soft:#eef2ec}
+@media (prefers-color-scheme:dark){:root{--bg:#161a17;--fg:#e5e9e5;--muted:#a3ada5;--line:#333b35;--accent:#8fc5a2;--soft:#1f2621}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 Georgia,"Times New Roman",serif}
+.wrap{max-width:42rem;margin:0 auto;padding:24px 16px 48px}
+header.site,footer.site{font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+header.site a{color:var(--fg);font-weight:600;text-decoration:none}
+nav.crumbs{font:14px system-ui,sans-serif;color:var(--muted);margin:1.5rem 0 .5rem}
+nav.crumbs a{color:var(--muted)}
+h1{font-size:1.9rem;line-height:1.2;margin:.3rem 0 1rem}
+h2{font-size:1.25rem;line-height:1.3;margin:2rem 0 .4rem}
+.lede{font-size:1.08rem}
+code{font:.88em ui-monospace,"SFMono-Regular",Menlo,monospace;background:var(--soft);padding:.05em .3em;border-radius:3px}
+.formula code{display:inline-block;padding:.4rem .6rem;white-space:normal}
+table{border-collapse:collapse;width:100%;font:15px/1.45 system-ui,sans-serif;margin:.6rem 0}
+th,td{border-bottom:1px solid var(--line);padding:.4rem .45rem;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{font-weight:700}
+.small{font:14px system-ui,sans-serif;color:var(--muted)}
+aside.product{background:var(--soft);border-radius:8px;padding:.4rem 1.1rem 1rem;margin:2rem 0}
+a{color:var(--accent)}
+a.cta{font:600 16px system-ui,sans-serif}
+.scope,.ai{font:14px/1.5 system-ui,sans-serif;color:var(--muted)}
+.scope{border-left:3px solid var(--line);padding-left:.8rem}
+footer.site{border-top:1px solid var(--line);margin-top:2.5rem;padding-top:1rem}
+ul.guides{padding-left:1.1rem} ul.guides li{margin:.8rem 0}
+@media print{body{font-size:11.5pt;background:#fff;color:#000}.wrap{max-width:none;padding:0}aside.product{background:#f1f4ef}h2{break-after:avoid}table,aside{break-inside:avoid}a{color:#2b5a40}}
+</style></head>
+<body><div class="wrap">
+<header class="site"><a href="/">StarlitDesk</a> · Spreadsheet tools for handmade sellers</header>
+<nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a></nav>
+<main><article>
+<h1>How to price jewelry when metal prices move: cost per piece, a re-price trigger and your fees</h1>
+<p class="lede">When silver or gold prices climb, jewelry makers face two questions: what does each piece really cost now, and is it time to change the price tag? Re-pricing on every move confuses buyers; never re-pricing lets the metal quietly eat your margin. This guide shows how to cost a piece from the metal you actually use, price it so your margin survives the fees, and work out in advance the metal price at which each piece needs a new price.</p>
+
+<h2>1. Cost the metal you use, not the metal you see</h2>
+<p>Start from your supplier's price per gram (or per ounce), and use the price you would pay to restock today, not what you paid months ago. Then weigh the metal that goes into one piece, and add your workshop loss: filings, sprue, offcuts and test pieces you do not recover. Track it over a few pieces; 5-10% is common for hand fabrication, but use your own figure.</p>
+<p class="formula"><code>metal cost = finished weight × (1 + loss %) × price per gram</code></p>
+
+<h2>2. Add findings, packaging, time and overhead</h2>
+<p>Add chain, findings (clasps, bails, jump rings, ear wires), stones or beads and packaging: box, card, pouch. Time each piece from cutting to polishing and pay yourself an hourly rate you would accept. Add a small overhead allowance for polishing compounds, saw blades, tools and software.</p>
+
+<h2>3. Price so your margin survives the fees</h2>
+<p>Selling fees are usually a percentage of the sale plus a fixed amount per order. To keep the margin you want <em>after</em> fees:</p>
+<p class="formula"><code>price = (cost per piece + fixed fee per order) ÷ (1 − fee % − target margin %)</code></p>
+
+<h2>4. Set a re-price trigger for each piece</h2>
+<p>Pick a floor: the lowest margin you will accept before you change a price (below your target, so small moves do not force a new tag). The money between what a piece keeps now and what it keeps at the floor is its buffer. Divide that buffer by the grams of metal the piece uses, and you know how far the metal price can rise before you must re-price:</p>
+<p class="formula"><code>trigger price per gram = today's price per gram + (keep now − floor % × price) ÷ grams used</code></p>
+<p>Write the trigger next to each piece. When your supplier's price passes it, re-price that piece. Until then, leave it alone.</p>
+
+<h2>Worked example: a pendant and a heavy cuff</h2>
+<p class="small">Illustrative figures only. The silver price of $1.40 per gram is an example, not a market price or forecast. Use your own supplier's price, weights, loss rate and fees.</p>
+<table>
+<tr><th>Per piece</th><th class="n">Pendant</th><th class="n">Cuff</th></tr>
+<tr><td>Finished silver weight</td><td class="n">5.0 g</td><td class="n">28.0 g</td></tr>
+<tr><td>Silver used, with 8% loss</td><td class="n">5.4 g</td><td class="n">30.24 g</td></tr>
+<tr><td>Silver at $1.40/g</td><td class="n">$7.56</td><td class="n">$42.34</td></tr>
+<tr><td>Chain and findings</td><td class="n">$4.55</td><td class="n">$0.00</td></tr>
+<tr><td>Packaging</td><td class="n">$0.95</td><td class="n">$1.20</td></tr>
+<tr><td>Labour at $18/h</td><td class="n">50 min = $15.00</td><td class="n">70 min = $21.00</td></tr>
+<tr><td>Overhead</td><td class="n">$0.60</td><td class="n">$0.60</td></tr>
+<tr class="total"><td>Cost per piece</td><td class="n">$28.66</td><td class="n">$65.14</td></tr>
+</table>
+<p>With an example fee of 9.5% plus $0.45 per order and a 30% target margin, the formula suggests $48.12 for the pendant and $108.41 for the cuff. Priced at $49 and $109, they keep $15.24 (31%) and $33.06 (30%) after fees and costs, on top of paying you $18 an hour.</p>
+
+<h2>What a 10% rise does</h2>
+<p>If silver rises 10%, to $1.54 per gram, the pendant's cost goes up $0.76 and the cuff's $4.23. At the same prices, the pendant still keeps 29.5%, while the cuff drops to 26.4%. Same metal, same rise, very different effect: the cuff is mostly silver, the pendant is mostly time and chain.</p>
+
+<h2>Each piece gets its own trigger</h2>
+<p>With a 25% floor:</p>
+<table>
+<tr><th>Trigger</th><th class="n">Pendant</th><th class="n">Cuff</th></tr>
+<tr><td>Keep at 25% floor</td><td class="n">$12.25</td><td class="n">$27.25</td></tr>
+<tr><td>Buffer</td><td class="n">$2.99</td><td class="n">$5.81</td></tr>
+<tr><td>Buffer per gram used</td><td class="n">$0.55</td><td class="n">$0.19</td></tr>
+<tr class="total"><td>Re-price when silver passes</td><td class="n">$1.95/g (+39%)</td><td class="n">$1.59/g (+14%)</td></tr>
+</table>
+<p>The cuff needs a new price long before the pendant does. If silver reaches $1.68 per gram (+20%), the cuff costs $73.60; left at $109 it keeps $24.59, a 22.6% margin, below the floor. The formula gives $122.40, so a new price of $123 brings it back to 30%. The pendant, still under its trigger, keeps its price.</p>
+
+<h2>5. When metal falls</h2>
+<p>Run the same numbers when prices fall. You can hold your prices and keep the extra margin as a buffer for the next rise, or lower the metal-heavy pieces. Whichever you choose, decide by the numbers, not by the headlines. This guide does not predict metal prices or advise on buying metal; it only helps you price what you make.</p>
+
+<h2>6. Re-check the whole range</h2>
+<p>List every piece with its metal, grams, cost, price and trigger, and sort by trigger. Your heaviest pieces in the dearest metal sit at the top: watch those. Gold-filled and plated pieces usually move less, because metal is a smaller share of their cost. In a spreadsheet, a new supplier price updates every piece at once.</p>
+
+<aside class="product">
+<h2>A spreadsheet that does this for you</h2>
+<p>We make a Jewelry Pricing &amp; Profit Workbook that follows this method: enter your metal price per gram once and every piece that uses it updates, with findings, packaging and labour per piece, a suggested price at your margin and what you keep after fees. A metal price test % (10% to start) shows which pieces would fall below your target if metal rises. It has no live metal prices: you enter your own. It is tested in LibreOffice Calc.</p>
+<p><a class="cta" href="https://www.etsy.com/listing/4589813222/jewelry-pricing-calculator-spreadsheet">See the Jewelry Pricing &amp; Profit Workbook</a></p>
+</aside>
+
+<p class="scope">This guide covers costing and pricing only. It does not predict metal prices and is not investment, tax, legal or financial advice. Metal purity, hallmarking and precious-metal rules, and product-safety rules such as nickel limits, depend on where you sell and are not covered.</p>
+
+<p class="ai">Written with AI tools (Anthropic's Claude) by StarlitDesk and checked by us; the worked example was calculated and checked before publishing.</p>
+</article></main>
+<footer class="site"><p><a href="/guides/">More guides</a> · <a href="/privacy.html">Privacy policy</a></p><p>Our product images are partly made with AI tools.</p><p>© 2026 StarlitDesk</p></footer>
+</div></body></html>

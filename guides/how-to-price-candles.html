@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to price candles · StarlitDesk</title>
+<meta name="description" content="A step-by-step method to cost one candle from a whole pour, add your time and overhead, and set a price that keeps your margin after selling fees. Worked example included.">
+<link rel="canonical" href="https://starlitdesk.github.io/guides/how-to-price-candles.html">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2421;--muted:#5d665f;--line:#dcdfd9;--accent:#35614a;--soft:#eef2ec}
+@media (prefers-color-scheme:dark){:root{--bg:#161a17;--fg:#e5e9e5;--muted:#a3ada5;--line:#333b35;--accent:#8fc5a2;--soft:#1f2621}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 Georgia,"Times New Roman",serif}
+.wrap{max-width:42rem;margin:0 auto;padding:24px 16px 48px}
+header.site,footer.site{font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+header.site a{color:var(--fg);font-weight:600;text-decoration:none}
+nav.crumbs{font:14px system-ui,sans-serif;color:var(--muted);margin:1.5rem 0 .5rem}
+nav.crumbs a{color:var(--muted)}
+h1{font-size:1.9rem;line-height:1.2;margin:.3rem 0 1rem}
+h2{font-size:1.25rem;line-height:1.3;margin:2rem 0 .4rem}
+.lede{font-size:1.08rem}
+code{font:.88em ui-monospace,"SFMono-Regular",Menlo,monospace;background:var(--soft);padding:.05em .3em;border-radius:3px}
+.formula code{display:inline-block;padding:.4rem .6rem;white-space:normal}
+table{border-collapse:collapse;width:100%;font:15px/1.45 system-ui,sans-serif;margin:.6rem 0}
+th,td{border-bottom:1px solid var(--line);padding:.4rem .45rem;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{font-weight:700}
+.small{font:14px system-ui,sans-serif;color:var(--muted)}
+aside.product{background:var(--soft);border-radius:8px;padding:.4rem 1.1rem 1rem;margin:2rem 0}
+a{color:var(--accent)}
+a.cta{font:600 16px system-ui,sans-serif}
+.scope,.ai{font:14px/1.5 system-ui,sans-serif;color:var(--muted)}
+.scope{border-left:3px solid var(--line);padding-left:.8rem}
+footer.site{border-top:1px solid var(--line);margin-top:2.5rem;padding-top:1rem}
+ul.guides{padding-left:1.1rem} ul.guides li{margin:.8rem 0}
+@media print{body{font-size:11.5pt;background:#fff;color:#000}.wrap{max-width:none;padding:0}aside.product{background:#f1f4ef}h2{break-after:avoid}table,aside{break-inside:avoid}a{color:#2b5a40}}
+</style></head>
+<body><div class="wrap">
+<header class="site"><a href="/">StarlitDesk</a> · Spreadsheet tools for handmade sellers</header>
+<nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a></nav>
+<main><article>
+<h1>How to price candles: a cost-per-candle method that includes your time and selling fees</h1>
+<p class="lede">Most candle makers know roughly what a pound of wax costs. Far fewer know what one finished candle costs once the fragrance, wick, jar, label, box and their own time are counted. That gap is why so many candles are priced at whatever the shop next door charges. This guide walks through one method you can use for any candle, with a worked example.</p>
+
+<h2>1. Cost a whole pour, then divide</h2>
+<p>Costing one candle at a time is fiddly. Costing a whole batch is easier and more accurate, because wax and fragrance are bought and measured in bulk. For one pour, write down:</p>
+<ul>
+<li>how many vessels you fill and the fill weight per vessel;</li>
+<li>your fragrance load (your own figure, within your supplier's stated maximum);</li>
+<li>the price per ounce or gram of wax and of fragrance oil;</li>
+<li>the cost per candle of wicks, jars or tins, lids, labels and boxes;</li>
+<li>how long the batch takes you, from melting to labelling.</li>
+</ul>
+<p>Pick one weight unit and stay with it. Mixing ounces for fill weight with grams for wax price is the most common costing error.</p>
+
+<h2>2. Split the fill into wax and fragrance</h2>
+<p>Fill weight is wax plus fragrance. If you measure fragrance load as a percentage of wax weight, the wax in each candle is <code>fill weight ÷ (1 + load)</code> and the fragrance is the rest. Some makers measure load against total weight instead; either works if you use the same convention every time.</p>
+
+<h2>3. Add your time and a share of overhead</h2>
+<p>Your time is a real cost even if you never pay yourself. Choose an hourly rate you would accept for the work, multiply by the batch hours and divide by the candles in the batch. Then add a small amount per candle for overhead: the share of things like scales, thermometers, test burns, and website or software subscriptions that each candle has to carry.</p>
+
+<h2>4. Price so your margin survives the fees</h2>
+<p>A common shortcut is cost × 2. It ignores selling fees, which are usually a percentage of the sale plus a fixed amount per order. A cleaner formula sets the margin you want to keep <em>after</em> fees:</p>
+<p class="formula"><code>price = (cost per candle + fixed fee per order) ÷ (1 − fee % − target margin %)</code></p>
+<p>Use your own platform's published rates for the fee terms, and check them a few times a year, because they change.</p>
+
+<h2>Worked example: an 8 oz jar candle</h2>
+<p class="small">Illustrative numbers only. Use your own prices and your supplier's fragrance limits.</p>
+<table>
+<tr><th>Item</th><th>Basis</th><th class="n">Per candle</th></tr>
+<tr><td>Wax</td><td>7.41 oz at $0.20/oz (8 oz fill, 8% load on wax)</td><td class="n">$1.48</td></tr>
+<tr><td>Fragrance oil</td><td>0.59 oz at $1.80/oz</td><td class="n">$1.07</td></tr>
+<tr><td>Wick</td><td></td><td class="n">$0.15</td></tr>
+<tr><td>Jar and lid</td><td></td><td class="n">$1.60</td></tr>
+<tr><td>Label</td><td></td><td class="n">$0.20</td></tr>
+<tr><td>Gift box</td><td></td><td class="n">$0.45</td></tr>
+<tr><td>Labour</td><td>2 h for a batch of 12 at $20/h</td><td class="n">$3.33</td></tr>
+<tr><td>Overhead</td><td>flat allowance</td><td class="n">$0.50</td></tr>
+<tr class="total"><td>Total cost</td><td></td><td class="n">$8.78</td></tr>
+</table>
+<p>With an example fee of 9.5% plus $0.45 per order and a 30% target margin: <code>(8.78 + 0.45) ÷ (1 − 0.095 − 0.30) = $15.26</code>. Rounded up to $16, the candle keeps $5.25 after fees and costs, a 33% margin, while still paying you $20 an hour.</p>
+<p>Now compare that with the cost × 2 shortcut: $17.56 looks safer, but if you only counted materials ($4.95 × 2 = $9.90), you would lose about $0.27 on every candle once fees, overhead and your time at $20 an hour are counted. That is the trap the shortcut hides.</p>
+
+<h2>5. Check each product, not just your best seller</h2>
+<p>Travel tins, wax melts and gift sets have different vessel costs and pour times, so they rarely share a margin with your main jar. Run the same calculation for each product and sort them by margin. Products that sit below break-even are the first to re-price, re-design or drop.</p>
+
+<h2>6. Wholesale and markets</h2>
+<p>If you sell wholesale, the shop will expect a lower price and resell at roughly double. Work out your wholesale price with the same formula (with no platform fee, but any payment or invoicing costs) and check that your retail price is at least twice it. If it is not, your retail price is too low for wholesale to work. At markets, add the pitch fee to overhead for that day and spread it across the candles you expect to sell.</p>
+
+<h2>7. Re-check when something changes</h2>
+<p>Re-run your numbers when a supplier changes prices, when you change vessel or fragrance, and when a platform changes its fees. Keeping the calculation in a spreadsheet makes this a five-minute job instead of an afternoon.</p>
+
+<aside class="product">
+<h2>A spreadsheet that does this for you</h2>
+<p>We make a Candle Pricing &amp; Profit Workbook that follows this method: it splits wax and fragrance from each pour, adds labour and packaging, suggests a price at your margin and shows what you keep after fees. It is tested in LibreOffice Calc.</p>
+<p><a class="cta" href="https://www.etsy.com/listing/4589712919/candle-pricing-calculator-spreadsheet">See the Candle Pricing &amp; Profit Workbook</a></p>
+</aside>
+
+<p class="scope">This guide covers costing only. It does not give fragrance-load, safety, labelling or other regulatory advice: follow your supplier's guidance and your local rules. It is not tax, legal or financial advice.</p>
+
+<p class="ai">Written with AI tools (Anthropic's Claude) by StarlitDesk and checked by us; the worked example was calculated and checked before publishing.</p>
+</article></main>
+<footer class="site"><p><a href="/guides/">More guides</a> · <a href="/privacy.html">Privacy policy</a></p><p>Our product images are partly made with AI tools.</p><p>© 2026 StarlitDesk</p></footer>
+</div></body></html>

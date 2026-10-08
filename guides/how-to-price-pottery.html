@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to price pottery · StarlitDesk</title>
+<meta name="description" content="Work out what a kiln load costs and split it per piece by shelf space, spread cracks and seconds over the pieces you sell, add your time and price so your margin survives the fees. Worked example included.">
+<link rel="canonical" href="https://starlitdesk.github.io/guides/how-to-price-pottery.html">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2421;--muted:#5d665f;--line:#dcdfd9;--accent:#35614a;--soft:#eef2ec}
+@media (prefers-color-scheme:dark){:root{--bg:#161a17;--fg:#e5e9e5;--muted:#a3ada5;--line:#333b35;--accent:#8fc5a2;--soft:#1f2621}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 Georgia,"Times New Roman",serif}
+.wrap{max-width:42rem;margin:0 auto;padding:24px 16px 48px}
+header.site,footer.site{font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+header.site a{color:var(--fg);font-weight:600;text-decoration:none}
+nav.crumbs{font:14px system-ui,sans-serif;color:var(--muted);margin:1.5rem 0 .5rem}
+nav.crumbs a{color:var(--muted)}
+h1{font-size:1.9rem;line-height:1.2;margin:.3rem 0 1rem}
+h2{font-size:1.25rem;line-height:1.3;margin:2rem 0 .4rem}
+.lede{font-size:1.08rem}
+code{font:.88em ui-monospace,"SFMono-Regular",Menlo,monospace;background:var(--soft);padding:.05em .3em;border-radius:3px}
+.formula code{display:inline-block;padding:.4rem .6rem;white-space:normal}
+table{border-collapse:collapse;width:100%;font:15px/1.45 system-ui,sans-serif;margin:.6rem 0}
+th,td{border-bottom:1px solid var(--line);padding:.4rem .45rem;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{font-weight:700}
+.small{font:14px system-ui,sans-serif;color:var(--muted)}
+aside.product{background:var(--soft);border-radius:8px;padding:.4rem 1.1rem 1rem;margin:2rem 0}
+a{color:var(--accent)}
+a.cta{font:600 16px system-ui,sans-serif}
+.scope,.ai{font:14px/1.5 system-ui,sans-serif;color:var(--muted)}
+.scope{border-left:3px solid var(--line);padding-left:.8rem}
+footer.site{border-top:1px solid var(--line);margin-top:2.5rem;padding-top:1rem}
+ul.guides{padding-left:1.1rem} ul.guides li{margin:.8rem 0}
+@media print{body{font-size:11.5pt;background:#fff;color:#000}.wrap{max-width:none;padding:0}aside.product{background:#f1f4ef}h2{break-after:avoid}table,aside{break-inside:avoid}a{color:#2b5a40}}
+</style></head>
+<body><div class="wrap">
+<header class="site"><a href="/">StarlitDesk</a> · Spreadsheet tools for handmade sellers</header>
+<nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a></nav>
+<main><article>
+<h1>How to price pottery: kiln firing cost per piece, cracked pieces, your time and fees</h1>
+<p class="lede">Most potters price a mug from the clay, the glaze and their time. Two costs often go missing: the electricity for two kiln firings, and the pieces that crack, warp or come out as seconds. Each is small on its own, but together they can take a few points off your margin, and a half-empty kiln or a bad firing takes more. This guide shows how to cost one sellable piece, including firing and losses, and price it so your margin survives the fees.</p>
+
+<h2>1. Cost a kiln load, then split it</h2>
+<p>An electric kiln's energy use is roughly its rated power times the firing hours times its average draw. Elements switch on and off as the kiln follows its schedule, so it rarely draws full power for the whole firing: the average draw is your own estimate, and your electricity meter or kiln log is the best source. Multiply by your price per kWh to get the cost of one load. Do it separately for bisque and glaze firings, because the hours and the number of pieces that fit differ.</p>
+<p class="formula"><code>load cost = kW × hours × average draw % × price per kWh</code><br><code>firing cost per piece = bisque load ÷ pieces per bisque load + glaze load ÷ pieces per glaze load</code></p>
+<p>Fire at a shared studio? Use the studio's firing fee per piece instead of the kiln maths.</p>
+
+<h2>2. Give big pieces their kiln space</h2>
+<p>A serving bowl can take the shelf space of two mugs. If it does, it should carry two mugs' worth of firing cost. Count pieces per load in "mug spaces" and charge each piece for the spaces it uses.</p>
+
+<h2>3. Spread cracks and seconds over the good pieces</h2>
+<p>If one piece in ten cracks, warps or ends up a second you will not sell at full price, the nine good ones have to pay for the clay, glaze and firing of the tenth. Track your loss rate over a few firings for each kind of piece.</p>
+<p class="formula"><code>cost per sellable piece = (clay + glaze + other + firing) ÷ (1 − loss %)</code></p>
+
+<h2>4. Add time, packaging and overhead, then price for fees</h2>
+<p>Add your making time at an hourly rate you would accept (wedging, throwing, trimming, handles, glazing), packaging, and a small overhead allowance for tools, kiln shelves, elements and software. Selling fees are usually a percentage of the sale plus a fixed amount per order. To keep the margin you want <em>after</em> fees:</p>
+<p class="formula"><code>price = (cost per piece + fixed fee per order) ÷ (1 − fee % − target margin %)</code></p>
+
+<h2>Worked example: a mug and a serving bowl</h2>
+<p class="small">Illustrative figures only, not measured values: an 11.5 kW kiln, 9-hour bisque and 11-hour glaze firings, a 50% average draw, electricity at $0.17 per kWh, 30 mug spaces per bisque load and 24 per glaze load, clay at $22.00 per 10 kg bag. Use your own kiln, prices and loss rates.</p>
+<p>A bisque load costs $8.80 and a glaze load $10.75. Per mug space that is $0.29 + $0.45 = $0.74 of firing.</p>
+<table>
+<tr><th>Per piece</th><th class="n">Mug</th><th class="n">Bowl</th></tr>
+<tr><td>Clay at $2.20/kg</td><td class="n">0.6 kg = $1.32</td><td class="n">0.9 kg = $1.98</td></tr>
+<tr><td>Glaze</td><td class="n">$0.70</td><td class="n">$0.95</td></tr>
+<tr><td>Firing at $0.74/space</td><td class="n">1 = $0.74</td><td class="n">2 = $1.48</td></tr>
+<tr><td>Cost before loss</td><td class="n">$2.76</td><td class="n">$4.41</td></tr>
+<tr><td>Per sellable piece, 10% loss</td><td class="n">$3.07</td><td class="n">$4.90</td></tr>
+<tr><td>Labour at $18/h</td><td class="n">20 min = $6.00</td><td class="n">30 min = $9.00</td></tr>
+<tr><td>Packaging</td><td class="n">$0.90</td><td class="n">$1.40</td></tr>
+<tr><td>Overhead</td><td class="n">$0.50</td><td class="n">$0.50</td></tr>
+<tr class="total"><td>Cost per piece</td><td class="n">$10.47</td><td class="n">$15.80</td></tr>
+</table>
+<p>With an example fee of 9.5% plus $0.45 per order and a 30% target margin, the formula suggests $18.05 for the mug and $26.86 for the bowl. Priced at $19 and $27, they keep $6.28 (33%) and $8.18 (30%) after fees and costs, on top of paying you $18 an hour.</p>
+
+<h2>What leaving out firing and loss does</h2>
+<p>Cost the same pieces from clay, glaze, time, packaging and overhead only, and the formula suggests $16.31 for the mug and $23.60 for the bowl. Priced at $17 and $24, they keep $4.47 (26%) and $5.47 (23%), not 30%. The bowl loses more because it takes two spaces in every firing.</p>
+
+<h2>A half-empty kiln or a bad firing</h2>
+<p>A load costs about the same to fire whether the kiln is full or not. Fire the glaze load with 12 mugs instead of 24 and the mug's firing cost rises from $0.74 to $1.19. Have a bad month with 20% losses as well, and the mug costs $11.41.</p>
+<table>
+<tr><th>Mug, what you keep</th><th class="n">At $19</th><th class="n">At $17</th></tr>
+<tr><td>Normal: full kiln, 10% loss</td><td class="n">$6.28 (33%)</td><td class="n">$4.47 (26%)</td></tr>
+<tr><td>Glaze load half full</td><td class="n">$5.78 (30%)</td><td class="n">$3.97 (23%)</td></tr>
+<tr><td>20% loss</td><td class="n">$5.89 (31%)</td><td class="n">$4.08 (24%)</td></tr>
+<tr class="total"><td>Both</td><td class="n">$5.33 (28%)</td><td class="n">$3.52 (21%)</td></tr>
+</table>
+<p>The full-cost price absorbs a bad firing and stays near target. The price that left out firing and loss starts below target and falls further. Filling the kiln and bringing the loss rate down are worth as much as a price change.</p>
+
+<h2>5. Re-check when something changes</h2>
+<p>Re-run the numbers when your electricity tariff, clay price, firing schedule or loss rate changes, and when you start making a new shape. A shape with a high loss rate or one that takes a lot of shelf space is where a price review pays off first.</p>
+
+<aside class="product">
+<h2>A spreadsheet that does this for you</h2>
+<p>We make a Pottery Pricing &amp; Profit Workbook that follows this method: enter your kiln's power, firing hours, average draw (your own estimate), electricity price and pieces per load, or a studio firing fee, and it works out the firing cost per piece. Add clays by bag price and weight, then pieces with glaze, other costs, loss % and labour minutes to get the cost per sellable piece. A piece that takes more kiln space can carry the extra under Other. Products show a suggested price at your margin and what you keep after fees. It is tested in LibreOffice Calc.</p>
+<p><a class="cta" href="https://www.etsy.com/listing/4589803767/pottery-pricing-calculator-spreadsheet">See the Pottery Pricing &amp; Profit Workbook</a></p>
+</aside>
+
+<p class="scope">This guide covers costing and pricing only and gives no glaze, firing or kiln advice. Glaze food safety, kiln and electrical safety, and product-safety rules depend on where you make and sell and are not covered. It is not tax, legal or financial advice.</p>
+
+<p class="ai">Written with AI tools (Anthropic's Claude) by StarlitDesk and checked by us; the worked example was calculated and checked before publishing.</p>
+</article></main>
+<footer class="site"><p><a href="/guides/">More guides</a> · <a href="/privacy.html">Privacy policy</a></p><p>Our product images are partly made with AI tools.</p><p>© 2026 StarlitDesk</p></footer>
+</div></body></html>
