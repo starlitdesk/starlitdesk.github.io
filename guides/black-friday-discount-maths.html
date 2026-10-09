@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Black Friday Discounts for Handmade Sellers: Do the Maths · StarlitDesk</title>
+<meta name="description" content="Find your lowest safe Black Friday price from cost, time and fees, and see how many more sales a 10-30% discount needs. Worked table inside.">
+<link rel="canonical" href="https://starlitdesk.github.io/guides/black-friday-discount-maths.html">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2421;--muted:#5d665f;--line:#dcdfd9;--accent:#35614a;--soft:#eef2ec}
+@media (prefers-color-scheme:dark){:root{--bg:#161a17;--fg:#e5e9e5;--muted:#a3ada5;--line:#333b35;--accent:#8fc5a2;--soft:#1f2621}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 Georgia,"Times New Roman",serif}
+.wrap{max-width:42rem;margin:0 auto;padding:24px 16px 48px}
+header.site,footer.site{font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+header.site a{color:var(--fg);font-weight:600;text-decoration:none}
+nav.crumbs{font:14px system-ui,sans-serif;color:var(--muted);margin:1.5rem 0 .5rem}
+nav.crumbs a{color:var(--muted)}
+h1{font-size:1.9rem;line-height:1.2;margin:.3rem 0 1rem}
+h2{font-size:1.25rem;line-height:1.3;margin:2rem 0 .4rem}
+.lede{font-size:1.08rem}
+code{font:.88em ui-monospace,"SFMono-Regular",Menlo,monospace;background:var(--soft);padding:.05em .3em;border-radius:3px}
+.formula code{display:inline-block;padding:.4rem .6rem;white-space:normal}
+table{border-collapse:collapse;width:100%;font:15px/1.45 system-ui,sans-serif;margin:.6rem 0}
+th,td{border-bottom:1px solid var(--line);padding:.4rem .45rem;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{font-weight:700}
+.small{font:14px system-ui,sans-serif;color:var(--muted)}
+aside.product{background:var(--soft);border-radius:8px;padding:.4rem 1.1rem 1rem;margin:2rem 0}
+a{color:var(--accent)}
+a.cta{font:600 16px system-ui,sans-serif}
+.scope,.ai{font:14px/1.5 system-ui,sans-serif;color:var(--muted)}
+.scope{border-left:3px solid var(--line);padding-left:.8rem}
+footer.site{border-top:1px solid var(--line);margin-top:2.5rem;padding-top:1rem}
+ul.guides{padding-left:1.1rem} ul.guides li{margin:.8rem 0}
+@media print{body{font-size:11.5pt;background:#fff;color:#000}.wrap{max-width:none;padding:0}aside.product{background:#f1f4ef}h2{break-after:avoid}table,aside{break-inside:avoid}a{color:#2b5a40}}
+</style></head>
+<body><div class="wrap">
+<header class="site"><a href="/">StarlitDesk</a> · Spreadsheet tools for handmade sellers</header>
+<nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a></nav>
+<main><article>
+<h1>How much can I discount for Black Friday and still profit?</h1>
+<p class="lede">Your deepest safe Black Friday discount is the one where the sale price still covers materials, packaging, your time and the selling fees on the lower price. Below that floor, every sale loses money. Above it, check the sales multiplier: on a $30 item that earns $8.90 a sale, a 20% discount leaves $3.47, so you need about 2.56 times as many sales to earn the same. This guide shows how to find both numbers for your own items, with two worked tables.</p>
+
+<h2>The short answer: a floor price and a sales multiplier</h2>
+<p>Two numbers decide whether a discount is worth it:</p>
+<ul>
+<li><strong>The floor price:</strong> the lowest price at which a sale still pays your true cost and the selling fees. Never go below it.</li>
+<li><strong>The sales multiplier:</strong> how many times as many sales you need at the discounted price to earn what you earn at full price. Small discounts need a few extra sales; deep ones need many.</li>
+</ul>
+
+<h2>Step 1: know your true cost per item</h2>
+<p>True cost is materials, packaging, your labour and a share of overhead such as tools, workspace and software (<a href="https://stocksmith.io/blog/protect-your-margin-black-friday">Stocksmith</a>). If you have not priced your time yet, start with <a href="/guides/how-to-work-out-your-hourly-rate-for-handmade-work.html">how to work out your hourly rate</a>, then the full method in <a href="/guides/how-to-price-handmade-items.html">how to price handmade items</a>.</p>
+
+<h2>Step 2: fees come off the discounted price</h2>
+<p>Most selling and payment fees are a percentage of the sale plus a fixed amount per order. When the price drops, the percentage part drops a little too, but the fixed part and your costs do not. That is why your margin falls faster than your price.</p>
+
+<h2>Step 3: find your floor price</h2>
+<p class="formula"><code>floor price = (true cost + fixed fee per order) ÷ (1 − fee %)</code><br><code>deepest discount = 1 − floor price ÷ full price</code></p>
+<p>The floor still pays your time, because your time is in the true cost. It does not leave the business anything for slow months, so treat it as a limit, not a target.</p>
+
+<h2>Step 4: how many more sales each discount needs</h2>
+<p class="formula"><code>sales multiplier = margin per sale at full price ÷ margin per sale at the discounted price</code></p>
+<p>The same method is used by ecommerce break-even calculators, which note that it ignores fixed costs, returns and the effect of price on demand (<a href="https://wayflyer.com/tools/discount-break-even">Wayflyer</a>). It cannot tell you whether a discount <em>will</em> bring the extra sales; it tells you how many it needs.</p>
+
+<h2>Worked example: a $30 candle</h2>
+<p class="small">Illustrative figures only. The true cost of $18.00 includes materials, packaging and time. The fee of 9.5% of the sale price plus $0.25 per order is an invented example, not any platform's rate: use your own.</p>
+<p>Floor price: (18.00 + 0.25) ÷ 0.905 = <strong>$20.17</strong>. Check: fees on $20.17 are $1.92 + $0.25 = $2.17, and 20.17 − 18.00 − 2.17 = $0.00. The deepest discount is 1 − 20.17 ÷ 30.00 = <strong>32.77%</strong>.</p>
+<div style="overflow-x:auto"><table>
+<tr><th>Discount</th><th class="n">Sale price</th><th class="n">Fees</th><th class="n">Margin per sale</th><th class="n">Above floor</th><th class="n">Sales multiplier</th><th class="n">Sales to match 10 at full price</th></tr>
+<tr><td>0%</td><td class="n">$30.00</td><td class="n">$3.10</td><td class="n">$8.90</td><td class="n">$9.83</td><td class="n">×1.00</td><td class="n">10 ($89.00)</td></tr>
+<tr><td>10%</td><td class="n">$27.00</td><td class="n">$2.82</td><td class="n">$6.18</td><td class="n">$6.83</td><td class="n">×1.44</td><td class="n">15 ($92.70)</td></tr>
+<tr><td>15%</td><td class="n">$25.50</td><td class="n">$2.67</td><td class="n">$4.83</td><td class="n">$5.33</td><td class="n">×1.84</td><td class="n">19 ($91.77)</td></tr>
+<tr><td>20%</td><td class="n">$24.00</td><td class="n">$2.53</td><td class="n">$3.47</td><td class="n">$3.83</td><td class="n">×2.56</td><td class="n">26 ($90.22)</td></tr>
+<tr><td>25%</td><td class="n">$22.50</td><td class="n">$2.39</td><td class="n">$2.11</td><td class="n">$2.33</td><td class="n">×4.22</td><td class="n">43 ($90.73)</td></tr>
+<tr><td>30%</td><td class="n">$21.00</td><td class="n">$2.25</td><td class="n">$0.75</td><td class="n">$0.83</td><td class="n">×11.87</td><td class="n">119 ($89.25)</td></tr>
+</table></div>
+<p class="small">Fees = sale price × 9.5%, rounded to the cent, + $0.25. Margin = sale price − $18.00 − fees. Sales to match = the smallest whole number of sales whose margin reaches $89.00 (10 full-price sales); their total margin is in brackets.</p>
+<p>Ten full-price sales earn $89.00. At 10% off you need 15 sales to earn as much; at 20% off, 26; at 30% off, 119. Small discounts are cheap; deep ones rarely pay, because nearly all the margin is gone.</p>
+
+<h2>A second example: $12 earrings</h2>
+<p class="small">Illustrative figures only: true cost $6.50, same invented fee.</p>
+<p>Floor price: (6.50 + 0.25) ÷ 0.905 = <strong>$7.46</strong> (fees $0.71 + $0.25 = $0.96; 7.46 − 6.50 − 0.96 = $0.00), so the deepest discount is 37.83%.</p>
+<div style="overflow-x:auto"><table>
+<tr><th>Discount</th><th class="n">Sale price</th><th class="n">Fees</th><th class="n">Margin</th><th class="n">Multiplier</th><th class="n">Sales to match 10</th></tr>
+<tr><td>0%</td><td class="n">$12.00</td><td class="n">$1.39</td><td class="n">$4.11</td><td class="n">×1.00</td><td class="n">10 ($41.10)</td></tr>
+<tr><td>10%</td><td class="n">$10.80</td><td class="n">$1.28</td><td class="n">$3.02</td><td class="n">×1.36</td><td class="n">14 ($42.28)</td></tr>
+<tr><td>20%</td><td class="n">$9.60</td><td class="n">$1.16</td><td class="n">$1.94</td><td class="n">×2.12</td><td class="n">22 ($42.68)</td></tr>
+<tr><td>30%</td><td class="n">$8.40</td><td class="n">$1.05</td><td class="n">$0.85</td><td class="n">×4.84</td><td class="n">49 ($41.65)</td></tr>
+</table></div>
+<p>The earrings keep a bigger share of their price (34% against the candle's 30%), so the same discount hurts less. The multiplier depends on your margin share, not on the price.</p>
+
+<h2>Alternatives to a deep discount</h2>
+<p>These are ideas to test, not proven results:</p>
+<ul>
+<li><strong>A small discount</strong> of 10-15%, which can stay profitable when margins are healthy (<a href="https://stocksmith.io/blog/protect-your-margin-black-friday">Stocksmith</a>).</li>
+<li><strong>A set or bundle</strong> at a lower price per item: one order fee and one round of packing are spread over several items.</li>
+<li><strong>A small extra</strong> such as gift wrap, priced into your cost like any other material.</li>
+</ul>
+<p>Discounts are popular with small businesses: in a survey of 508 US small business owners for Xero, 72% said discounts had been their most effective tactic in past holiday sales, and 34% had never run a holiday promotion (<a href="https://researchscape.com/inthenews/cash-strapped-small-businesses-sit-out-black-friday-despite-knowing-discounts-drive-sales-xero-survey-finds">Researchscape, Oct 2025</a>). Whether to join in is your choice; the table shows what it costs.</p>
+
+<h2>Key dates in 2026</h2>
+<p>US Thanksgiving falls on the fourth Thursday of November, Thursday 26 November 2026. That makes Black Friday Friday 27 November, Small Business Saturday 28 November and Cyber Monday 30 November. Plan any offer, and its end date, before your busiest making weeks; see <a href="/guides/when-to-stop-taking-custom-christmas-orders.html">when to stop taking custom Christmas orders</a> for the other side of the calendar.</p>
+
+<h2>Common questions</h2>
+<p><strong>How much discount should I offer as a product business?</strong> No more than your deepest safe discount, and usually much less: check the multiplier for each step and ask whether you can realistically make and sell that many more.</p>
+<p><strong>How do I calculate my margin for Black Friday sales?</strong> Sale price minus true cost minus the fees on the sale price, as in the tables above.</p>
+<p><strong>Should product businesses do Black Friday?</strong> It is a choice. Some makers run a small offer; others keep their prices. The floor and multiplier show what a discount costs you before you decide.</p>
+
+<aside class="product">
+<h2>A spreadsheet for your true cost</h2>
+<p>We make a Maker Pricing &amp; Profit Workbook. Settings hold your hourly rate, target margin and country (61 to choose from), and for up to 50 products it shows cost per item including your time, break-even price, a suggested price at your target margin, fees, profit and margin at your price. The break-even price is the floor in this guide; enter the discounted price as your price to see its profit and margin. It does not build the discount table for you, and it does not calculate income tax. It is tested in Google Sheets and LibreOffice Calc.</p>
+<p><a class="cta" href="https://landegren.gumroad.com/l/pricing-profit-workbook">See the Maker Pricing &amp; Profit Workbook</a></p>
+</aside>
+
+<p class="scope">This guide covers pricing arithmetic only. Fee figures are invented examples; check your own platform and payment provider. Rules on advertising sale prices and reference prices differ by country and are not covered. It is not tax, legal or financial advice.</p>
+
+<p class="ai">Written with AI tools (Anthropic's Claude) by StarlitDesk and checked by us; the worked example was calculated and checked before publishing.</p>
+</article></main>
+<footer class="site"><p><a href="/guides/">More guides</a> · <a href="/privacy.html">Privacy policy</a></p><p>Our product images are partly made with AI tools.</p><p>© 2026 StarlitDesk</p></footer>
+</div></body></html>
