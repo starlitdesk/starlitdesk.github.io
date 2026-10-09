@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Consignment Stock Tracking for Makers: A Monthly Check · StarlitDesk</title>
+<meta name="description" content="Track consignment stock and payouts shop by shop: what you left, what sold, your share, what was paid and what is still owed. Worked example inside.">
+<link rel="canonical" href="https://starlitdesk.github.io/guides/how-to-keep-track-of-consignment-stock.html">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2421;--muted:#5d665f;--line:#dcdfd9;--accent:#35614a;--soft:#eef2ec}
+@media (prefers-color-scheme:dark){:root{--bg:#161a17;--fg:#e5e9e5;--muted:#a3ada5;--line:#333b35;--accent:#8fc5a2;--soft:#1f2621}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 Georgia,"Times New Roman",serif}
+.wrap{max-width:42rem;margin:0 auto;padding:24px 16px 48px}
+header.site,footer.site{font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+header.site a{color:var(--fg);font-weight:600;text-decoration:none}
+nav.crumbs{font:14px system-ui,sans-serif;color:var(--muted);margin:1.5rem 0 .5rem}
+nav.crumbs a{color:var(--muted)}
+h1{font-size:1.9rem;line-height:1.2;margin:.3rem 0 1rem}
+h2{font-size:1.25rem;line-height:1.3;margin:2rem 0 .4rem}
+.lede{font-size:1.08rem}
+code{font:.88em ui-monospace,"SFMono-Regular",Menlo,monospace;background:var(--soft);padding:.05em .3em;border-radius:3px}
+.formula code{display:inline-block;padding:.4rem .6rem;white-space:normal}
+table{border-collapse:collapse;width:100%;font:15px/1.45 system-ui,sans-serif;margin:.6rem 0}
+th,td{border-bottom:1px solid var(--line);padding:.4rem .45rem;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{font-weight:700}
+.small{font:14px system-ui,sans-serif;color:var(--muted)}
+aside.product{background:var(--soft);border-radius:8px;padding:.4rem 1.1rem 1rem;margin:2rem 0}
+a{color:var(--accent)}
+a.cta{font:600 16px system-ui,sans-serif}
+.scope,.ai{font:14px/1.5 system-ui,sans-serif;color:var(--muted)}
+.scope{border-left:3px solid var(--line);padding-left:.8rem}
+footer.site{border-top:1px solid var(--line);margin-top:2.5rem;padding-top:1rem}
+ul.guides{padding-left:1.1rem} ul.guides li{margin:.8rem 0}
+@media print{body{font-size:11.5pt;background:#fff;color:#000}.wrap{max-width:none;padding:0}aside.product{background:#f1f4ef}h2{break-after:avoid}table,aside{break-inside:avoid}a{color:#2b5a40}}
+</style></head>
+<body><div class="wrap">
+<header class="site"><a href="/">StarlitDesk</a> · Spreadsheet tools for handmade sellers</header>
+<nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a></nav>
+<main><article>
+<h1>How do I keep track of consignment stock and payouts?</h1>
+<p class="lede">Once a month, for each shop, write down what you dropped off, what sold, what the shop owes you at your agreed share, and what it has paid. The gap between owed and paid is your payout check; the pieces left over, counted on the shelf, are your stock check. In the worked example below, two shops look fine at first glance, but one still owes $25.00, one piece is missing ($15.00 of your share), and the slower shop has sold only 25.00% of what you left.</p>
+
+<h2>The short answer: one row per shop, five numbers, once a month</h2>
+<p>Consignment means a shop displays your work and pays you a share only when a piece sells. Most shops pay monthly, with a report of what sold (<a href="https://www.thecraftmap.com/blog/how-to-sell-crafts-on-consignment">TheCraftMap</a>). That report is the moment to check. For each shop, keep five numbers:</p>
+<ul>
+<li><strong>Dropped off:</strong> pieces you have delivered and not taken back.</li>
+<li><strong>Sold:</strong> pieces on the shop's sales report.</li>
+<li><strong>Owed:</strong> sales at retail × your share.</li>
+<li><strong>Paid:</strong> what actually reached your account.</li>
+<li><strong>Counted:</strong> pieces you can see on the shelf.</li>
+</ul>
+<p>Two checks follow from them: <code>still owed = owed − paid</code> and <code>missing = dropped off − sold − counted</code>. If both are zero, the shop's report and your records agree.</p>
+
+<h2>What to record at drop-off</h2>
+<p>Give every piece a code or SKU and keep a running log of what you left at each shop (<a href="https://www.thecraftmap.com/blog/how-to-sell-crafts-on-consignment">TheCraftMap</a>). One vendor guide suggests asking the shop owner to sign the inventory list at each drop-off and pickup (<a href="https://www.madeurban.com/blog/consignment-inventory-template/">Made Urban</a>), so both sides start from the same list. Record per piece:</p>
+<ul>
+<li>shop, item code, description and retail price;</li>
+<li>drop-off date;</li>
+<li>your agreed share for that shop.</li>
+</ul>
+<p>Splits differ by shop, so keep the share per shop, not one figure for everything. A 60/40 split in the maker's favour is the figure most often quoted (<a href="https://www.craftprofessional.com/what-is-a-fair-consignment-percentage.html">Craft Professional</a>), and one vendor guide puts the usual range at 50-70% to the maker (<a href="https://www.thecraftmap.com/blog/how-to-sell-crafts-on-consignment">TheCraftMap</a>). The split maths per channel is in our guide to <a href="/guides/wholesale-vs-retail-price-for-handmade-products.html">wholesale vs retail pricing</a>.</p>
+
+<h2>When the shop reports sales: owed against paid</h2>
+<p class="formula"><code>your share = pieces sold × retail price × your share %</code><br><code>still owed = your share − paid to you</code></p>
+<p>Do this per shop, from the shop's own report, as soon as the payment arrives. A gap is not always a problem: a payment may be in transit or cover only part of the month. But a gap that carries over to a second month is worth a friendly question.</p>
+
+<h2>Count the shelf: dropped off minus sold</h2>
+<p class="formula"><code>should be on the shelf = dropped off − sold</code><br><code>missing = should be on the shelf − counted</code></p>
+<p>Count when you visit, or ask the shop for a count. A missing piece was either sold and not reported, or lost, damaged or stolen. While your stock sits in a shop you carry more risk if a piece goes missing, so loss and damage belong in your agreement (<a href="https://www.madeurban.com/blog/consignment-vs-wholesale/">Made Urban</a>). Value a missing piece at your share of its retail price: that is what you would have been paid had it sold.</p>
+
+<h2>Sell-through and slow stock</h2>
+<p class="formula"><code>sell-through = sold ÷ dropped off × 100</code></p>
+<p>Sell-through shows which shops actually move your work. A low figure is a reason to swap the pieces for different ones, or to collect them. Unsold stock comes back to you at the end of the agreed term (<a href="https://www.thecraftmap.com/blog/how-to-sell-crafts-on-consignment">TheCraftMap</a>), but no standard term exists. Our own rule of thumb, not an industry standard: anything that has been out for more than 90 days gets swapped or collected.</p>
+
+<h2>Worked example: two shops, one month</h2>
+<p class="small">Illustrative figures only: an invented maker and two invented shops. Shop A has 12 pieces at $25.00 retail and pays 60% to the maker. Shop B has 20 pieces at $18.00 retail and pays 70%. This month Shop A paid $80.00 and Shop B paid $63.00.</p>
+<div style="overflow-x:auto"><table>
+<tr><th>Line</th><th class="n">Shop A</th><th class="n">Shop B</th><th class="n">Total</th></tr>
+<tr><td>Pieces dropped off</td><td class="n">12</td><td class="n">20</td><td class="n">32</td></tr>
+<tr><td>Pieces sold (shop report)</td><td class="n">7</td><td class="n">5</td><td class="n">12</td></tr>
+<tr><td>Shop sales at retail</td><td class="n">$175.00</td><td class="n">$90.00</td><td class="n">$265.00</td></tr>
+<tr><td>Your share (60% / 70%)</td><td class="n">$105.00</td><td class="n">$63.00</td><td class="n">$168.00</td></tr>
+<tr><td>Shop keeps</td><td class="n">$70.00</td><td class="n">$27.00</td><td class="n">$97.00</td></tr>
+<tr><td>Paid to you</td><td class="n">$80.00</td><td class="n">$63.00</td><td class="n">$143.00</td></tr>
+<tr class="total"><td>Still owed</td><td class="n">$25.00</td><td class="n">$0.00</td><td class="n">$25.00</td></tr>
+<tr><td>Sell-through</td><td class="n">58.33%</td><td class="n">25.00%</td><td class="n">37.50%</td></tr>
+<tr><td>Should be on the shelf</td><td class="n">5</td><td class="n">15</td><td class="n">20</td></tr>
+<tr><td>Counted on the shelf</td><td class="n">4</td><td class="n">15</td><td class="n">19</td></tr>
+<tr class="total"><td>Missing pieces (your share)</td><td class="n">1 ($15.00)</td><td class="n">0 ($0.00)</td><td class="n">1 ($15.00)</td></tr>
+<tr><td>Stock still out at retail</td><td class="n">$100.00</td><td class="n">$270.00</td><td class="n">$370.00</td></tr>
+<tr><td>Pieces out more than 90 days (our rule)</td><td class="n">2</td><td class="n">6</td><td class="n">8</td></tr>
+</table></div>
+<p class="small">Sales = sold × retail. Share = sales × share %. Shop keeps = sales − share. Still owed = share − paid. Sell-through = sold ÷ dropped off, to two decimals. Missing = should be on the shelf − counted; its value = pieces × retail × share %. Stock out = counted × retail.</p>
+<p>Shop A sold 7 pieces, $175.00 at retail, so your 60% is $105.00. It paid $80.00, so <strong>$25.00 is still owed</strong>. It should have 12 − 7 = 5 pieces left, but you count 4: one piece is missing, worth 1 × $25.00 × 60% = <strong>$15.00</strong> of your share. Ask about both in one message: perhaps the missing piece sold and the $25.00 is part of its payment, perhaps not.</p>
+<p>Shop B has paid in full, but it has sold only 5 of 20 pieces, a sell-through of <strong>25.00%</strong>, against 58.33% at Shop A. Six of its 15 remaining pieces have been out for more than 90 days, so swap or collect them. Across both shops, $370.00 of your work at retail is still on other people's shelves; count it as stock you own, for example when you plan <a href="/guides/how-much-holiday-stock-to-make.html">how much holiday stock to make</a>.</p>
+
+<h2>What your agreement should state, so the numbers can be checked</h2>
+<p>This is not legal advice, and we do not supply an agreement. For the monthly check to work, you need to know from each shop: the split, when and how it pays, how sales are reported, how long it keeps stock, how unsold stock comes back, and who pays for lost or damaged pieces. If any of these is unclear, the numbers above cannot settle a difference.</p>
+
+<h2>Common questions</h2>
+<p><strong>How do I track inventory on consignment?</strong> Log every piece you drop off with a code, price and date; record each shop's sales report and each payment; once a month compare owed with paid and count the shelf against dropped off minus sold.</p>
+<p><strong>What is a typical consignment split for handmade items?</strong> 60/40 in the maker's favour is the most quoted figure, with 50-70% to the maker as a common range. See <a href="/guides/wholesale-vs-retail-price-for-handmade-products.html">wholesale vs retail pricing</a> for what each split keeps you per item.</p>
+<p><strong>Do you get paid upfront when selling on consignment?</strong> No. You are paid only when a piece sells (<a href="https://www.craftprofessional.com/what-is-a-fair-consignment-percentage.html">Craft Professional</a>), usually monthly.</p>
+<p><strong>What happens if a consignment shop doesn't sell my items?</strong> Unsold pieces come back to you at the end of the agreed term. Check sell-through monthly so you can swap slow pieces before then.</p>
+<p>To see whether consignment payouts and your other sales add up to a profit, do the <a href="/guides/is-my-craft-business-making-a-profit.html">monthly profit check</a>. For pricing itself, start with <a href="/guides/how-to-price-handmade-items.html">how to price handmade items</a>.</p>
+
+<aside class="product">
+<h2>A spreadsheet that does this for you</h2>
+<p>We make a Maker Stockist Tracker for makers who sell through shops. You set each shop's split, payout cycle and who pays for lost stock, then log deliveries, sales, returns and losses in the Consignment Log and each payment in Payouts. The Stockists sheet shows units on the shelf, balance owed and a CHASE or OVERDUE flag per shop; the Shop Report shows sell-through per product. It also tracks wholesale invoices. It is a spreadsheet, not an app: you type in what each shop reports and what you count. It is tested in LibreOffice Calc.</p>
+<p><a class="cta" href="https://landegren.gumroad.com/l/stockist-tracker">See the Maker Stockist Tracker</a></p>
+</aside>
+
+<p class="scope">This guide covers record-keeping and arithmetic only. It does not cover the tax treatment of consignment stock, contracts or your legal rights if a shop does not pay; check the rules where you sell. It is not tax, legal or financial advice.</p>
+
+<p class="ai">Written with AI tools (Anthropic's Claude) by StarlitDesk and checked by us; the worked example was calculated and checked before publishing.</p>
+</article></main>
+<footer class="site"><p><a href="/guides/">More guides</a> · <a href="/privacy.html">Privacy policy</a></p><p>Our product images are partly made with AI tools.</p><p>© 2026 StarlitDesk</p></footer>
+</div></body></html>
