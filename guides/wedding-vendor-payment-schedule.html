@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wedding Vendor Payment Schedule: Deposits and Due Dates · StarlitDesk</title>
+<meta name="description" content="Build a wedding vendor payment schedule: list each deposit and balance with its due date, total them by month and see the last-month peak early.">
+<link rel="canonical" href="https://starlitdesk.github.io/guides/wedding-vendor-payment-schedule.html">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2421;--muted:#5d665f;--line:#dcdfd9;--accent:#35614a;--soft:#eef2ec}
+@media (prefers-color-scheme:dark){:root{--bg:#161a17;--fg:#e5e9e5;--muted:#a3ada5;--line:#333b35;--accent:#8fc5a2;--soft:#1f2621}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 Georgia,"Times New Roman",serif}
+.wrap{max-width:42rem;margin:0 auto;padding:24px 16px 48px}
+header.site,footer.site{font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+header.site a{color:var(--fg);font-weight:600;text-decoration:none}
+nav.crumbs{font:14px system-ui,sans-serif;color:var(--muted);margin:1.5rem 0 .5rem}
+nav.crumbs a{color:var(--muted)}
+h1{font-size:1.9rem;line-height:1.2;margin:.3rem 0 1rem}
+h2{font-size:1.25rem;line-height:1.3;margin:2rem 0 .4rem}
+.lede{font-size:1.08rem}
+code{font:.88em ui-monospace,"SFMono-Regular",Menlo,monospace;background:var(--soft);padding:.05em .3em;border-radius:3px}
+.formula code{display:inline-block;padding:.4rem .6rem;white-space:normal}
+table{border-collapse:collapse;width:100%;font:15px/1.45 system-ui,sans-serif;margin:.6rem 0}
+th,td{border-bottom:1px solid var(--line);padding:.4rem .45rem;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{font-weight:700}
+.small{font:14px system-ui,sans-serif;color:var(--muted)}
+aside.product{background:var(--soft);border-radius:8px;padding:.4rem 1.1rem 1rem;margin:2rem 0}
+a{color:var(--accent)}
+a.cta{font:600 16px system-ui,sans-serif}
+.scope,.ai{font:14px/1.5 system-ui,sans-serif;color:var(--muted)}
+.scope{border-left:3px solid var(--line);padding-left:.8rem}
+footer.site{border-top:1px solid var(--line);margin-top:2.5rem;padding-top:1rem}
+ul.guides{padding-left:1.1rem} ul.guides li{margin:.8rem 0}
+@media print{body{font-size:11.5pt;background:#fff;color:#000}.wrap{max-width:none;padding:0}aside.product{background:#f1f4ef}h2{break-after:avoid}table,aside{break-inside:avoid}a{color:#2b5a40}}
+</style></head>
+<body><div class="wrap">
+<header class="site"><a href="/">StarlitDesk</a> · Spreadsheet tools for handmade sellers</header>
+<nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a></nav>
+<main><article>
+<h1>Wedding vendor payment schedule: when each deposit and balance is due</h1>
+<p class="lede">A wedding vendor payment schedule lists every deposit and every balance with its due date, then adds them up by month. Deposits are usually paid when you sign; most balances fall due 14 to 30 days before the wedding, so the last month is the expensive one. In the illustrative example below, deposits are 27.52% of the $25,950.00 total and 69.39% falls due in the last 45 days.</p>
+
+<h2>What goes in a payment schedule</h2>
+<p>One row per vendor, with seven columns:</p>
+<ul>
+<li><strong>Vendor</strong> and the <strong>contract total</strong>.</li>
+<li><strong>Deposit</strong> and the date you paid it (usually the day you sign).</li>
+<li><strong>Balance</strong> (total minus deposit) and its <strong>due date</strong>, from the contract.</li>
+<li><strong>Paid date</strong>, typed in when you pay, so you can see at a glance what is still open.</li>
+</ul>
+<p>Some vendors split the balance into more than one payment; give each payment its own line with its own date. Whether a payment is refundable depends on your contract; check it before you sign.</p>
+
+<h2>Typical deposit sizes and balance due dates</h2>
+<p>These are ranges published by wedding sites, not rules. Your contracts decide.</p>
+<ul>
+<li><strong>Deposits:</strong> a planner's guide gives venue 25%–50%, catering 25%–50%, photography and video 25%–50% or a flat retainer, florist 20%–30%, attire 50% or more, and rentals 25% (<a href="https://theyesgirls.com/vendor-deposits-explained-when-couples-actually-pay/">The Yes Girls</a>, Jul 2026).</li>
+<li><strong>Balances:</strong> final payments are often due 30 days before the wedding for photography, videography and music, and 14 days before for catering, florals and lighting (<a href="https://theknot.com/content/when-to-pay-wedding-vendors">The Knot</a>, updated Aug 2024). The same planner's guide puts it plainly: "Nearly every remaining balance comes due in the last month, and often the last two weeks."</li>
+<li><strong>Couples' experience:</strong> on wedding forums, couples report caterer deposits from a flat $250 to 50% of the estimated total (<a href="https://www.weddingwire.com/wedding-forums/caterers-and-deposits/674b0e5c97b8aecf.html">WeddingWire forum</a>) and venue deposits of 25%, 30% and 50% (<a href="https://community.weddingwire.ca/forums/how-much-or-what-percentage-of-the-total-amount-deposit-on-a-wedding-venue--t3788">WeddingWire.ca forum</a>). These are individual couples' contracts.</li>
+</ul>
+
+<h2>Step 1: list every vendor, deposit and balance</h2>
+<p class="small">Illustrative figures only; every input is invented. Wedding on Saturday 12 June 2027, venue booked in October 2026. Six vendors, each deposit paid at signing. Tips of $600.00 in cash on the day get their own line.</p>
+<div style="overflow-x:auto"><table>
+<tr><th>Vendor</th><th class="n">Total</th><th>Deposit rule</th><th class="n">Deposit</th><th>Deposit paid</th><th class="n">Balance</th><th>Balance due</th></tr>
+<tr><td>Venue</td><td class="n">$9,000.00</td><td>30%</td><td class="n">$2,700.00</td><td>Sat 24 Oct 2026</td><td class="n">$6,300.00</td><td>14 days before: Sat 29 May 2027</td></tr>
+<tr><td>Catering (110 guests × $75.00)</td><td class="n">$8,250.00</td><td>25%</td><td class="n">$2,062.50</td><td>Sat 7 Nov 2026</td><td class="n">$6,187.50</td><td>14 days before: Sat 29 May 2027</td></tr>
+<tr><td>Photographer</td><td class="n">$2,800.00</td><td>30%</td><td class="n">$840.00</td><td>Sat 14 Nov 2026</td><td class="n">$1,960.00</td><td>30 days before: Thu 13 May 2027</td></tr>
+<tr><td>Attire</td><td class="n">$1,600.00</td><td>50%</td><td class="n">$800.00</td><td>Sat 5 Dec 2026</td><td class="n">$800.00</td><td>at delivery: Sat 17 Apr 2027</td></tr>
+<tr><td>Florist</td><td class="n">$2,200.00</td><td>20%</td><td class="n">$440.00</td><td>Sat 16 Jan 2027</td><td class="n">$1,760.00</td><td>14 days before: Sat 29 May 2027</td></tr>
+<tr><td>DJ</td><td class="n">$1,500.00</td><td>flat $300.00</td><td class="n">$300.00</td><td>Sat 6 Feb 2027</td><td class="n">$1,200.00</td><td>30 days before: Thu 13 May 2027</td></tr>
+<tr class="total"><td>Vendors</td><td class="n">$25,350.00</td><td></td><td class="n">$7,142.50</td><td></td><td class="n">$18,207.50</td><td></td></tr>
+</table></div>
+<p class="small">Deposit = total × deposit rule (DJ: flat amount). Balance = total − deposit.</p>
+<p>With the $600.00 of tips, the wedding costs <strong>$25,950.00</strong>. The deposits, $7,142.50, are 7,142.50 ÷ 25,950.00 = <strong>27.52%</strong> of it. The other 72.48% is still to pay after the last contract is signed.</p>
+
+<h2>Step 2: turn "14 days before" into real dates</h2>
+<p>Contracts often give the balance as "30 days before the event". Count back on a calendar and write the real date in your schedule, because "30 days before" is easy to miss when it falls on a weekday. Here, 12 June 2027 minus 30 days is Thursday 13 May; minus 14 days is Saturday 29 May.</p>
+
+<h2>Step 3: add the payments up by month</h2>
+<div style="overflow-x:auto"><table>
+<tr><th>Month</th><th>What is due</th><th class="n">Due</th><th class="n">Paid so far</th><th class="n">Share of total so far</th></tr>
+<tr><td>Oct 2026</td><td>venue deposit</td><td class="n">$2,700.00</td><td class="n">$2,700.00</td><td class="n">10.40%</td></tr>
+<tr><td>Nov 2026</td><td>catering + photographer deposits</td><td class="n">$2,902.50</td><td class="n">$5,602.50</td><td class="n">21.59%</td></tr>
+<tr><td>Dec 2026</td><td>attire deposit</td><td class="n">$800.00</td><td class="n">$6,402.50</td><td class="n">24.67%</td></tr>
+<tr><td>Jan 2027</td><td>florist deposit</td><td class="n">$440.00</td><td class="n">$6,842.50</td><td class="n">26.37%</td></tr>
+<tr><td>Feb 2027</td><td>DJ deposit</td><td class="n">$300.00</td><td class="n">$7,142.50</td><td class="n">27.52%</td></tr>
+<tr><td>Mar 2027</td><td>nothing</td><td class="n">$0.00</td><td class="n">$7,142.50</td><td class="n">27.52%</td></tr>
+<tr><td>Apr 2027</td><td>attire balance</td><td class="n">$800.00</td><td class="n">$7,942.50</td><td class="n">30.61%</td></tr>
+<tr class="total"><td>May 2027</td><td>photographer, DJ (13 May); venue, catering, florist (29 May)</td><td class="n">$17,407.50</td><td class="n">$25,350.00</td><td class="n">97.69%</td></tr>
+<tr><td>Jun 2027</td><td>tips on the day</td><td class="n">$600.00</td><td class="n">$25,950.00</td><td class="n">100.00%</td></tr>
+</table></div>
+<p class="small">Share = paid so far ÷ $25,950.00, rounded to two decimals.</p>
+<p>May carries 1,960.00 + 1,200.00 + 6,300.00 + 6,187.50 + 1,760.00 = <strong>$17,407.50</strong>, which is 67.08% of the whole wedding in one month. Counting from 28 April, the last 45 days hold $17,407.50 + $600.00 = $18,007.50, or <strong>69.39%</strong>. Seeing that number in October is the point of the schedule.</p>
+
+<h2>Step 4: check your set-aside against the schedule</h2>
+<p>If you put money aside each month, compare the running total with what is due by each month end. This is arithmetic, not advice on how to save.</p>
+<p>Splitting $25,950.00 evenly over the nine months from October to June gives about <strong>$2,883.33</strong> a month (nine of those make $25,949.97, $0.03 short of the total). By the end of May that is 8 × $2,883.33 = $23,066.64, but $25,350.00 is due by 29 May: <strong>$2,283.36 short</strong> in the peak month.</p>
+<p>Spreading the $25,350.00 of vendor payments over the eight months from October to May instead gives <strong>$3,168.75</strong> a month, with the tips set aside in June:</p>
+<div style="overflow-x:auto"><table>
+<tr><th>Month end</th><th class="n">Due so far</th><th class="n">Set aside at $2,883.33</th><th class="n">Gap</th><th class="n">Set aside at $3,168.75</th><th class="n">Gap</th></tr>
+<tr><td>Oct 2026</td><td class="n">$2,700.00</td><td class="n">$2,883.33</td><td class="n">+$183.33</td><td class="n">$3,168.75</td><td class="n">+$468.75</td></tr>
+<tr><td>Nov 2026</td><td class="n">$5,602.50</td><td class="n">$5,766.66</td><td class="n">+$164.16</td><td class="n">$6,337.50</td><td class="n">+$735.00</td></tr>
+<tr><td>Dec 2026</td><td class="n">$6,402.50</td><td class="n">$8,649.99</td><td class="n">+$2,247.49</td><td class="n">$9,506.25</td><td class="n">+$3,103.75</td></tr>
+<tr><td>Jan 2027</td><td class="n">$6,842.50</td><td class="n">$11,533.32</td><td class="n">+$4,690.82</td><td class="n">$12,675.00</td><td class="n">+$5,832.50</td></tr>
+<tr><td>Feb 2027</td><td class="n">$7,142.50</td><td class="n">$14,416.65</td><td class="n">+$7,274.15</td><td class="n">$15,843.75</td><td class="n">+$8,701.25</td></tr>
+<tr><td>Mar 2027</td><td class="n">$7,142.50</td><td class="n">$17,299.98</td><td class="n">+$10,157.48</td><td class="n">$19,012.50</td><td class="n">+$11,870.00</td></tr>
+<tr><td>Apr 2027</td><td class="n">$7,942.50</td><td class="n">$20,183.31</td><td class="n">+$12,240.81</td><td class="n">$22,181.25</td><td class="n">+$14,238.75</td></tr>
+<tr class="total"><td>May 2027</td><td class="n">$25,350.00</td><td class="n">$23,066.64</td><td class="n">−$2,283.36</td><td class="n">$25,350.00</td><td class="n">$0.00</td></tr>
+</table></div>
+<p class="small">Set aside = months so far × the monthly amount. Gap = set aside − due so far; a minus means short.</p>
+<p>This is a month-end check only. In May, $3,160.00 (photographer and DJ) is due on the 13th, before that month's set-aside may be in, so look at the payment dates as well as the month totals.</p>
+
+<h2>Day-of payments and tips</h2>
+<p>Some hair and makeup artists and musicians are paid on the day, and tips are often handed over in envelopes on the day (<a href="https://theknot.com/content/when-to-pay-wedding-vendors">The Knot</a>). Give each its own line with the wedding date, so the cash is counted in the schedule rather than found missing on the morning.</p>
+
+<h2>Keeping it current</h2>
+<ul>
+<li>Type the paid date the day you pay; a blank paid date is an open payment.</li>
+<li>When the final head count is in, update the catering total: the balance changes, the deposit you paid does not.</li>
+<li>Re-add the month totals after every change, and check the next 60 days each month.</li>
+</ul>
+
+<h2>Common questions</h2>
+<p><strong>When do you pay wedding vendors?</strong> On each contract's due dates: usually a deposit at signing and the balance 14 to 30 days before the wedding, as above. List every date in one schedule so none is missed.</p>
+<p><strong>What percentage deposit does a wedding venue take?</strong> The ranges published above run from 25% to 50%, and couples report 25%, 30% and 50%. Your venue's contract sets the figure.</p>
+<p><strong>How much deposit do caterers want?</strong> It may be a flat amount or a percentage of the estimated total; the balance is often tied to the final head count, so expect it to change.</p>
+<p><strong>Is a deposit refundable?</strong> That depends on your contract. Check it before you sign.</p>
+
+<p>Make things for weddings yourself? The seller's side of the same arithmetic is in <a href="/guides/how-much-deposit-for-a-custom-order.html">how much deposit to take on a custom order</a>; photographers can see why their balance is due weeks ahead in <a href="/guides/how-to-price-photography-sessions.html">how to price photography sessions</a>.</p>
+
+<aside class="product">
+<h2>A spreadsheet for your payment schedule</h2>
+<p>We make a Wedding Budget &amp; Payment Planner: an .xlsx with 8 sheets (Start Here, Dashboard, Settings, Vendors, Payments, Budget, Cash Flow, Contributions) and a 6-page quick-start PDF with a worked example. Enter your wedding date and budget on Settings, add each vendor, list every deposit and payment with its due date, and type the paid date when you pay; Cash Flow shows the payments by month. It is tested in LibreOffice Calc.</p>
+<p><a class="cta" href="https://landegren.gumroad.com/l/wedding-budget-planner">See the Wedding Budget &amp; Payment Planner</a></p>
+</aside>
+
+<p class="scope">This guide covers record-keeping and arithmetic only. Every figure in the example is invented; deposit ranges and due dates are those published by the sources named. It does not advise on saving, borrowing or how to pay. Refunds, cancellations and due dates are set by your contracts; check them. It is not tax, legal or financial advice.</p>
+
+<p class="ai">Written with AI tools (Anthropic's Claude) by StarlitDesk and checked by us; the worked example was calculated and checked before publishing.</p>
+</article></main>
+<footer class="site"><p><a href="/guides/">More guides</a> · <a href="/privacy.html">Privacy policy</a></p><p>Our product images are partly made with AI tools.</p><p>© 2026 StarlitDesk</p></footer>
+</div></body></html>
