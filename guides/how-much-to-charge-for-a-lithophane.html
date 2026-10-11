@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How Much to Charge for a Lithophane (Panel, Light, Lantern) · StarlitDesk</title>
+<meta name="description" content="Price a lithophane from filament, 10+ printer hours, failed prints, the light and your photo time. Example: $28 panel, $36 night light, $64 lantern.">
+<link rel="canonical" href="https://starlitdesk.github.io/guides/how-much-to-charge-for-a-lithophane.html">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2421;--muted:#5d665f;--line:#dcdfd9;--accent:#35614a;--soft:#eef2ec}
+@media (prefers-color-scheme:dark){:root{--bg:#161a17;--fg:#e5e9e5;--muted:#a3ada5;--line:#333b35;--accent:#8fc5a2;--soft:#1f2621}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 Georgia,"Times New Roman",serif}
+.wrap{max-width:42rem;margin:0 auto;padding:24px 16px 48px}
+header.site,footer.site{font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+header.site a{color:var(--fg);font-weight:600;text-decoration:none}
+nav.crumbs{font:14px system-ui,sans-serif;color:var(--muted);margin:1.5rem 0 .5rem}
+nav.crumbs a{color:var(--muted)}
+h1{font-size:1.9rem;line-height:1.2;margin:.3rem 0 1rem}
+h2{font-size:1.25rem;line-height:1.3;margin:2rem 0 .4rem}
+.lede{font-size:1.08rem}
+code{font:.88em ui-monospace,"SFMono-Regular",Menlo,monospace;background:var(--soft);padding:.05em .3em;border-radius:3px}
+.formula code{display:inline-block;padding:.4rem .6rem;white-space:normal}
+table{border-collapse:collapse;width:100%;font:15px/1.45 system-ui,sans-serif;margin:.6rem 0}
+th,td{border-bottom:1px solid var(--line);padding:.4rem .45rem;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{font-weight:700}
+.small{font:14px system-ui,sans-serif;color:var(--muted)}
+aside.product{background:var(--soft);border-radius:8px;padding:.4rem 1.1rem 1rem;margin:2rem 0}
+a{color:var(--accent)}
+a.cta{font:600 16px system-ui,sans-serif}
+.scope,.ai{font:14px/1.5 system-ui,sans-serif;color:var(--muted)}
+.scope{border-left:3px solid var(--line);padding-left:.8rem}
+footer.site{border-top:1px solid var(--line);margin-top:2.5rem;padding-top:1rem}
+ul.guides{padding-left:1.1rem} ul.guides li{margin:.8rem 0}
+@media print{body{font-size:11.5pt;background:#fff;color:#000}.wrap{max-width:none;padding:0}aside.product{background:#f1f4ef}h2{break-after:avoid}table,aside{break-inside:avoid}a{color:#2b5a40}}
+</style></head>
+<body><div class="wrap">
+<header class="site"><a href="/">StarlitDesk</a> · Spreadsheet tools for handmade sellers</header>
+<nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a></nav>
+<main><article>
+<h1>How much to charge for a lithophane</h1>
+<p class="lede">Price a lithophane from five costs: filament, printer hours, an allowance for failed prints, any bought light or frame, and your time preparing the photo and talking to the customer. Then price so a target margin is left after fees. In our example a framed panel costs $16.28 and needs at least $27.65; a night light with a bought LED costs $21.17 and needs $35.74. Filament is under $1 of that, so pricing by the gram badly undercharges. This guide works through a framed panel, a night light and a four-photo lantern.</p>
+
+<h2>1. Why filament is the smallest cost in a lithophane</h2>
+<p>A lithophane is a thin print that shows a photo when light shines through it: thicker areas look dark, thinner areas look bright. A printer maker's guide gives a typical thickness of "0.8mm to 3.2mm", printed with layers of "0.1mm or 0.12mm" and "100% rectilinear infill" (<a href="https://qidi3d.com/blogs/print-lab/3d-printed-lithophanes-technical-guide">printer maker's guide</a>, 29 Jun 2026). That is very little plastic: a framed panel in our example uses 45 g. What costs money is the time the printer spends on fine, slow layers, the prints that fail, the light, and your own time with the photo.</p>
+<p>In the worked example below, the panel's filament is $0.90 of its $16.28 cost, 5.53%. Costing only filament, labour, packaging and overhead, with no printer hours and no failures, gives $11.60 and a floor of $19.92: <strong>$7.73</strong> under the full floor of $27.65.</p>
+
+<h2>2. Printer hours: 10-15 per light, more for big panels</h2>
+<p>Fine layers and slow speeds make lithophanes long prints. A lithophane software vendor calls 0.12 mm layers "a sweet spot for us between the quality and the time it takes to print a lithophane" and advises "printing at 30 mm/s" (<a href="https://itslitho.com/?p=3848">software vendor's slicer guide</a>, 14 Dec 2025). One maker selling curved night lights about 4 inches across says "These prints take 10-15 hours to produce" (<a href="https://hvny.info/marketplace/shop/p/tg-creative/custom-lithophane">maker's product page</a>), and a print service notes that for large plates "print time runs past a day" (<a href="https://jlc3dp.com/blog/lithophane-3d-print">print service's guide</a>, 1 Sep 2026).</p>
+<p>Cost those hours with a machine rate: depreciation, power and maintenance per print hour. Our example uses the same $0.3204 an hour as <a href="/guides/how-to-price-3d-prints.html">how to price 3D prints</a>, which shows how to work out your own.</p>
+
+<h2>3. Failed prints: tall thin parts tip and ghost</h2>
+<p>Lithophanes are usually printed standing up, so they are tall, thin and easy to knock over. One user on a printer maker's forum reported "another litophane tipping over at 75-80%" of the print (<a href="https://forum.bambulab.com/t/printing-lithophanes-flat-or-vertical/84574">forum thread</a>, 15 Apr 2026; one user's report). The printer maker's guide above names "infill ghosting", where the infill pattern shows through the photo, as the leading cause of discarded lithophane prints, based on its support and community feedback. A failure late in a 12-hour print wastes nearly all of its filament and machine time, so each good piece carries the failed ones:</p>
+<p class="formula"><code>failure allowance = (filament + printer hours) ÷ (1 − failure rate) − (filament + printer hours)</code></p>
+<p>Our example uses 15%, our guess, higher than the 10% in the general 3D print guide because lithophanes are tall and thin. Use your own rate from the last few weeks. For the panel at $28.00: at 5% failures the allowance is $0.25, the cost $15.69 and it keeps $9.20; at 25% the allowance is $1.58, the cost $17.02 and it keeps $7.87.</p>
+
+<h2>4. Bought parts: light kits, frames, bases</h2>
+<p>A night light or lantern needs a light, and a panel may need a frame or stand. Cost them at what you pay, per piece, and do not add the failure allowance to them: a failed print does not use up the light. PLA softens at around 55-60°C, so the printer maker's guide recommends cool LED light sources rather than hot bulbs. A print service lists white or natural PLA as "the working default" and a panel "~150mm wide" as one that "fits a standard 6-inch frame".</p>
+<p>If you print a frame, box or lamp body from a model someone else designed, check its licence first. One free lithophane lamp model's licence says you may not "sell, rent, host, transfer, or distribute in any way the digital or 3D printed versions of this object" (<a href="https://makerworld.com/en/models/2145929">model page</a>). Use designs you made or are licensed to sell.</p>
+
+<h2>5. Your time: photo prep, proofs and messages</h2>
+<p>Most lithophanes are custom: a buyer sends a photo, you crop and adjust it, make a preview, maybe send a proof and answer messages, then finish and pack the piece. That hands-on time is the biggest cost in our example, bigger than the printer hours. Time it for a few orders and pay yourself an hourly rate you would accept; see <a href="/guides/how-to-work-out-your-hourly-rate-for-handmade-work.html">how to work out your hourly rate</a>. Ask each buyer to confirm they took the photo or have permission to use it.</p>
+
+<h2>6. Price so your margin survives the fees</h2>
+<p>Selling fees are usually a percentage of the sale plus a fixed amount per order. To keep the margin you want <em>after</em> fees:</p>
+<p class="formula"><code>price floor = (cost per piece + fixed fee per order) ÷ (1 − fee % − target margin %)</code></p>
+
+<h2>7. Worked example: panel, night light, four-photo lantern</h2>
+<p class="small">Illustrative figures only; every input is invented. White PLA at $20.00 per 1,000 g; machine rate $0.3204 per print hour; failure rate 15% (our guess); labour $18.00 an hour; overhead $0.50 a piece; a 30% target margin and an example fee of 9.5% of the price + $0.45 per order, rounded to the cent (no platform's rate). Gram weights are guesses: read yours from your slicer.</p>
+<div style="overflow-x:auto"><table>
+<tr><th>Line</th><th>Basis</th><th class="n">Framed panel</th><th class="n">Night light</th><th class="n">Lantern</th></tr>
+<tr><td>What it is</td><td></td><td class="n">Framed panel 150 × 100 mm + printed stand</td><td class="n">Curved night light + bought LED</td><td class="n">Four-photo lantern + LED kit</td></tr>
+<tr><td>Filament</td><td>45 / 30 / 140 g at $20.00 per 1,000 g</td><td class="n">$0.90</td><td class="n">$0.60</td><td class="n">$2.80</td></tr>
+<tr><td>Printer hours</td><td>12 / 10 / 22 h × $0.3204</td><td class="n">$3.84</td><td class="n">$3.20</td><td class="n">$7.05</td></tr>
+<tr><td>Failed-print allowance</td><td>15%: (filament + hours) ÷ 0.85 − (filament + hours)</td><td class="n">$0.84</td><td class="n">$0.67</td><td class="n">$1.74</td></tr>
+<tr><td>Labour</td><td>30 / 35 / 60 min at $18.00/h: photo prep, proof, messages, finishing</td><td class="n">$9.00</td><td class="n">$10.50</td><td class="n">$18.00</td></tr>
+<tr><td>Bought light or kit</td><td></td><td class="n">$0.00</td><td class="n">$4.50</td><td class="n">$6.00</td></tr>
+<tr><td>Packaging</td><td></td><td class="n">$1.20</td><td class="n">$1.20</td><td class="n">$2.00</td></tr>
+<tr><td>Overhead</td><td>flat allowance</td><td class="n">$0.50</td><td class="n">$0.50</td><td class="n">$0.50</td></tr>
+<tr class="total"><td>Cost per piece</td><td></td><td class="n">$16.28</td><td class="n">$21.17</td><td class="n">$38.09</td></tr>
+<tr><td>Price floor at a 30% margin</td><td>(cost + $0.45) ÷ (1 − 0.095 − 0.30)</td><td class="n">$27.65</td><td class="n">$35.74</td><td class="n">$63.70</td></tr>
+<tr><td>Priced at</td><td></td><td class="n">$28.00</td><td class="n">$36.00</td><td class="n">$64.00</td></tr>
+<tr><td>Fees</td><td>9.5% of the price + $0.45</td><td class="n">$3.11</td><td class="n">$3.87</td><td class="n">$6.53</td></tr>
+<tr class="total"><td>Kept after fees and costs</td><td>margin</td><td class="n">$8.61 (30.75%)</td><td class="n">$10.96 (30.44%)</td><td class="n">$19.38 (30.28%)</td></tr>
+</table></div>
+<p>Check the panel: (0.90 + 3.84) ÷ 0.85 = $5.58, so the allowance is 5.58 − 4.74 = $0.84; 30 minutes at $18.00 an hour = $9.00; all lines together = <strong>$16.28</strong>. Floor: (16.28 + 0.45) ÷ 0.605 = $27.65. At $28.00 the fees are $3.11, and 28.00 − 3.11 − 16.28 = <strong>$8.61</strong>, 30.75% of the price.</p>
+<p>The hours fit what sellers and guides report: 10-15 hours for a small night light, and much longer for big plates. Your own times decide your price.</p>
+
+<h2>8. Can you match a $15 price?</h2>
+<p>Online prices for custom lithophanes run from about $15 to about $70, and one maker's order form asks "$50/custom night light" for a 6"x4" light with a plug-in lamp, shipping and tax included (<a href="https://form.jotform.com/261668699971077">maker's order form</a>). The low end rarely works once your time is paid. The panel at $14.99: fees $1.87, and 14.99 − 1.87 − 16.28 loses <strong>$3.16</strong>. The night light at $15.99: fees $1.97, and 15.99 − 1.97 − 21.17 loses <strong>$7.15</strong>. Even with your time counted as free (cost $10.67), the night light keeps only $3.35, 20.95% of the price. Low prices only work if photo prep is unpaid.</p>
+<p>At the top of that range the lantern does well: at $59.00 it keeps 59.00 − 6.06 − 38.09 = $14.85 (25.17%), and at $68.00 it keeps 68.00 − 6.91 − 38.09 = $23.00 (33.82%). Above your floor, a higher price is room to spare, not a risk.</p>
+
+<h2>9. How many can one printer make before Christmas?</h2>
+<p>Long prints put a hard limit on holiday orders. Illustrative: one printer running two 12-hour panels a day from Mon 2 Nov to Tue 15 Dec is 44 days and 88 prints. At 15% failures that is 88 × 0.85 = 74.8, so 74 good panels. At $28.00, keeping $8.61 each, that is 74 × 8.61 = <strong>$637.14</strong> kept, if every one sells. Tue 15 Dec leaves two days before Thu 17 Dec, USPS Ground Advantage's last recommended send date for the contiguous US (<a href="https://www.usps.com/holiday/holiday-shipping-dates.htm">USPS</a>). Holiday orders also need time to ship: work back from your carrier's date with <a href="/guides/when-to-stop-taking-custom-christmas-orders.html">when to stop taking custom Christmas orders</a>. Black Friday is Fri 27 Nov and Christmas Day is Fri 25 Dec in 2026. For a big custom lantern, a deposit that covers the light kit and filament protects you if the order stops: see <a href="/guides/how-much-deposit-for-a-custom-order.html">how much deposit to take on a custom order</a>, and for quoting extras, <a href="/guides/how-to-price-custom-orders.html">how to price custom orders</a>.</p>
+
+<h2>Common questions</h2>
+<p><strong>How much should I charge for a lithophane?</strong> At least its own floor, from filament, printer hours, failed prints, any light or frame, your time and fees. In the example the panel's floor is $27.65 and it sells at $28.00; the night light's floor is $35.74 and it sells at $36.00.</p>
+<p><strong>What is a fair lithophane lamp price?</strong> In the example the four-photo lantern with an LED kit costs $38.09, its floor is $63.70 and it sells at $64.00, keeping $19.38. A lamp with several photos takes longer to print and to prepare, so it needs a higher price, not just more filament.</p>
+<p><strong>What should a lithophane photo cost the buyer?</strong> Count the photo work in the price: cropping, adjusting contrast, a preview and messages take real minutes on every custom order, as section 5 shows.</p>
+<p><strong>Is selling lithophanes worth it?</strong> It can be if you price above your floor and limit orders to what your printer can make in time. At low market prices, the numbers in section 8 show what you give up.</p>
+
+<aside class="product">
+<h2>A spreadsheet that does this for you</h2>
+<p>We make a 3D Print Pricing &amp; Profit Workbook. It turns spools into cost per gram and a printer block into cost per print hour, and its Print Jobs sheet takes parts per plate, a failure rate % (we tested 15%), setup and finishing time. A column for other costs per part, such as a bought LED light kit, is added after the failure allowance, so failed prints do not inflate the light. It suggests a price at your margin and shows what you keep after fees. It is tested in LibreOffice Calc.</p>
+<p><a class="cta" href="https://starlitdesk.gumroad.com/l/3d-print-pricing-profit-workbook">See the 3D Print Pricing &amp; Profit Workbook</a></p>
+</aside>
+
+<p class="scope">Pricing arithmetic only. No electrical, LED or product-safety advice: follow your light kit maker's guidance and your local rules. Use only photos the buyer has the right to share and frame or box designs you made or are licensed to sell. Vendor and seller figures are examples read on one day, not market rates; the other example inputs are invented. No tax or legal advice.</p>
+
+<p class="ai">Written with AI tools (Anthropic's Claude) by StarlitDesk and checked by us; the worked example was calculated and checked before publishing.</p>
+</article></main>
+<footer class="site"><p><a href="/guides/">More guides</a> · <a href="/privacy.html">Privacy policy</a></p><p>Our product images are partly made with AI tools.</p><p>© 2026 StarlitDesk</p></footer>
+</div></body></html>
