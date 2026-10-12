@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to Keep Track of Orders (Holiday Order Log) · StarlitDesk</title>
+<meta name="description" content="One row per order, a ship-by date and the hours it takes. A simple holiday order log, the five columns that matter and a daily hours check. Worked example.">
+<link rel="canonical" href="https://starlitdesk.github.io/guides/how-to-keep-track-of-orders-for-small-business.html">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2421;--muted:#5d665f;--line:#dcdfd9;--accent:#35614a;--soft:#eef2ec}
+@media (prefers-color-scheme:dark){:root{--bg:#161a17;--fg:#e5e9e5;--muted:#a3ada5;--line:#333b35;--accent:#8fc5a2;--soft:#1f2621}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 Georgia,"Times New Roman",serif}
+.wrap{max-width:42rem;margin:0 auto;padding:24px 16px 48px}
+header.site,footer.site{font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+header.site a{color:var(--fg);font-weight:600;text-decoration:none}
+nav.crumbs{font:14px system-ui,sans-serif;color:var(--muted);margin:1.5rem 0 .5rem}
+nav.crumbs a{color:var(--muted)}
+h1{font-size:1.9rem;line-height:1.2;margin:.3rem 0 1rem}
+h2{font-size:1.25rem;line-height:1.3;margin:2rem 0 .4rem}
+.lede{font-size:1.08rem}
+code{font:.88em ui-monospace,"SFMono-Regular",Menlo,monospace;background:var(--soft);padding:.05em .3em;border-radius:3px}
+.formula code{display:inline-block;padding:.4rem .6rem;white-space:normal}
+table{border-collapse:collapse;width:100%;font:15px/1.45 system-ui,sans-serif;margin:.6rem 0}
+th,td{border-bottom:1px solid var(--line);padding:.4rem .45rem;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{font-weight:700}
+.small{font:14px system-ui,sans-serif;color:var(--muted)}
+aside.product{background:var(--soft);border-radius:8px;padding:.4rem 1.1rem 1rem;margin:2rem 0}
+a{color:var(--accent)}
+a.cta{font:600 16px system-ui,sans-serif}
+.scope,.ai{font:14px/1.5 system-ui,sans-serif;color:var(--muted)}
+.scope{border-left:3px solid var(--line);padding-left:.8rem}
+footer.site{border-top:1px solid var(--line);margin-top:2.5rem;padding-top:1rem}
+ul.guides{padding-left:1.1rem} ul.guides li{margin:.8rem 0}
+@media print{body{font-size:11.5pt;background:#fff;color:#000}.wrap{max-width:none;padding:0}aside.product{background:#f1f4ef}h2{break-after:avoid}table,aside{break-inside:avoid}a{color:#2b5a40}}
+</style></head>
+<body><div class="wrap">
+<header class="site"><a href="/">StarlitDesk</a> · Spreadsheet tools for handmade sellers</header>
+<nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a></nav>
+<main><article>
+<h1>How to keep track of orders for a small craft business</h1>
+<p class="lede">To keep track of orders in a small craft business, keep one order log with a row for every order: the date it came in, what it is, the ship-by date, the making hours it needs and its status. Sort the log by ship-by date, and once a day add up the hours still booked for each ship-by date and compare them with the making hours you have left before it. In the worked example below, six holiday orders need 42.00 hours and the maker has 56.00 making hours before the last ship date, so every order fits with 14.00 hours to spare.</p>
+
+<h2>1. The five columns that matter</h2>
+<p>An order log does not need to be clever. It needs to be complete, so that nothing lives only in your inbox or your head. One row per order, with these five columns:</p>
+<ul>
+<li><strong>Date received.</strong> When the order came in. It settles who was first when two orders want the same days.</li>
+<li><strong>What.</strong> The items and quantities, plus any custom details (names, colours, sizes) or a short reference to where those details are written down.</li>
+<li><strong>Ship-by date.</strong> The day the parcel must leave you, not the day the customer wants it. Work it out from your carrier's last recommended date and the time it takes you to pack.</li>
+<li><strong>Making hours.</strong> Quantity × your timed hours per item. Time a few pieces with a timer rather than guessing, and include finishing and packing.</li>
+<li><strong>Status.</strong> One word: <em>new</em>, <em>making</em>, <em>made</em>, <em>shipped</em>. Add <em>at risk</em> when the daily check says an order will not be ready in time.</li>
+</ul>
+<p>Put every order in the same log, wherever it came from: your online shop, a message, a craft fair commission or a friend. Most order mix-ups happen when orders sit in different places.</p>
+
+<h2>2. Sort by ship-by date, not by date received</h2>
+<p>Work on orders in ship-by order. A big order that came in last week but ships first goes to the top, even if a small one has been waiting longer. Date received stays in the log for fairness and for your records, but the ship-by date decides what you make today.</p>
+
+<h2>3. The daily hours check</h2>
+<p>Once a day, for each ship-by date in your log, add up the hours of every unfinished order due on or before that date. Then count the making hours you have before it: working days × your making hours per day. If the hours booked are less than the hours you have, those orders fit. If not, you know today which orders are at risk, while you can still tell the customer or ask for a later date.</p>
+<p class="formula"><code>spare hours = making hours before the ship-by date − hours booked for orders due by then</code></p>
+<p>Check every ship-by date, not only the last one. A late order can look fine in the overall total while an earlier deadline is already over-booked.</p>
+
+<h2>4. Worked example: six holiday orders</h2>
+<p class="small">Illustrative figures only; every order, time and rate is invented. The maker has 4.00 making hours per working day, Monday to Friday, starting Monday 30 November 2026. The ship-by day itself is kept for packing, so the last making day for an order is the working day before it ships. Thu 17 Dec and Fri 18 Dec are the 2026 USPS last recommended send dates for Ground Advantage and Priority Mail to the contiguous US (<a href="https://www.usps.com/holiday/holiday-shipping-dates.htm">USPS holiday shipping dates</a>).</p>
+<div style="overflow-x:auto"><table>
+<tr><th>Order</th><th>Received</th><th>What</th><th class="n">Hours</th><th>Ship by</th><th class="n">Running total</th><th>Finished</th><th>Status</th></tr>
+<tr><td>E</td><td>Fri 27 Nov</td><td>20 ornaments × 0.75 h</td><td class="n">15.00</td><td>Fri 11 Dec</td><td class="n">15.00</td><td>Thu 3 Dec</td><td>on time</td></tr>
+<tr><td>A</td><td>Sat 21 Nov</td><td>6 ornaments × 0.75 h</td><td class="n">4.50</td><td>Thu 17 Dec</td><td class="n">19.50</td><td>Fri 4 Dec</td><td>on time</td></tr>
+<tr><td>B</td><td>Sun 22 Nov</td><td>12 candles × 0.50 h</td><td class="n">6.00</td><td>Thu 17 Dec</td><td class="n">25.50</td><td>Tue 8 Dec</td><td>on time</td></tr>
+<tr><td>C</td><td>Tue 24 Nov</td><td>2 custom stockings × 3.50 h</td><td class="n">7.00</td><td>Thu 17 Dec</td><td class="n">32.50</td><td>Thu 10 Dec</td><td>on time</td></tr>
+<tr><td>D</td><td>Wed 25 Nov</td><td>4 gift sets × 1.25 h</td><td class="n">5.00</td><td>Thu 17 Dec</td><td class="n">37.50</td><td>Fri 11 Dec</td><td>on time</td></tr>
+<tr><td>F</td><td>Sat 28 Nov</td><td>3 name signs × 1.50 h</td><td class="n">4.50</td><td>Fri 18 Dec</td><td class="n">42.00</td><td>Mon 14 Dec</td><td>on time</td></tr>
+</table></div>
+<p>Order E came in after A to D but ships first, so it goes to the top. Working through the log at 4.00 hours a day, each order is finished before its last making day.</p>
+<p>The daily check on Monday 30 November, one line per ship-by date:</p>
+<div style="overflow-x:auto"><table>
+<tr><th>Ship by</th><th>Making days before it</th><th class="n">Hours available</th><th class="n">Hours booked</th><th class="n">Spare</th></tr>
+<tr><td>Fri 11 Dec</td><td>Mon 30 Nov to Thu 10 Dec: 9 days</td><td class="n">36.00</td><td class="n">15.00</td><td class="n">21.00</td></tr>
+<tr><td>Thu 17 Dec</td><td>Mon 30 Nov to Wed 16 Dec: 13 days</td><td class="n">52.00</td><td class="n">37.50</td><td class="n">14.50</td></tr>
+<tr><td>Fri 18 Dec</td><td>Mon 30 Nov to Thu 17 Dec: 14 days</td><td class="n">56.00</td><td class="n">42.00</td><td class="n">14.00</td></tr>
+</table></div>
+<p>Every line has hours to spare, so all six orders fit. The smallest spare figure, 14.00 hours, is what you can still promise for Friday 18 December.</p>
+
+<h2>5. When to say no</h2>
+<p>That same Monday, a customer asks for 5 more custom stockings, shipped by Thursday 17 December. That is 5 × 3.50 = 17.50 hours. Add it to the Thu 17 Dec line: 37.50 + 17.50 = 55.00 hours booked against 52.00 available, 3.00 hours short. The order does not fit as asked.</p>
+<p>Four stockings (14.00 hours) would just fit: 51.50 hours booked by Thursday 17 December and 56.00 by Friday 18 December, leaving 0.00 hours on the Friday line for a slow day, a failed piece or a sick day. Three stockings (10.50 hours) leave 4.00 hours spare on the Thursday line and 3.50 on the Friday line. Offer three by that date, or all five with a later ship-by date. Saying so on Monday is far easier than explaining a late parcel on 23 December.</p>
+<p>Your cut-off for new orders is the day the spare hours run out. For a full method, see <a href="/guides/when-to-stop-taking-custom-christmas-orders.html">when to stop taking custom Christmas orders</a>.</p>
+
+<h2>6. Keep the log short and current</h2>
+<ul>
+<li><strong>Update it the moment an order arrives,</strong> not at the end of the day. A log that is a day behind gives a wrong daily check.</li>
+<li><strong>Move shipped orders out of the way.</strong> Keep them in the log for your records, but filter or sort them to the bottom so the daily check only counts work still to do.</li>
+<li><strong>Re-time your items in the busy season.</strong> If ornaments take 0.90 hours instead of 0.75, the whole plan changes. Update the hours per item and run the check again.</li>
+<li><strong>Keep some hours unbooked.</strong> Packing, messages and supply runs grow in December. The example books every making hour only to show the arithmetic.</li>
+</ul>
+<p>Ready-made stock uses the same hours as orders. If you also make stock for markets or your shop, plan it with <a href="/guides/how-much-holiday-stock-to-make.html">how much holiday stock to make</a> and subtract it before you take more orders. Open orders are one of the records worth keeping all year; see <a href="/guides/what-to-keep-track-of-in-a-handmade-business.html">what to keep track of in a handmade business</a>.</p>
+
+<h2>Common questions</h2>
+<h3>What is the simplest way to keep track of orders?</h3>
+<p>One list with one row per order and the five columns above, kept in one place. A paper notebook works for a few orders a week; a spreadsheet makes the sorting and the daily sum faster. Inventory software company Craftybase, writing about its own users, says "Manual tracking (spreadsheets, notebooks, memory) typically starts breaking down around 3-7 orders per day", and that "About 50% of currently-active makers are getting fewer than 1 order per day on average" (<a href="https://craftybase.com/blog/how-many-orders-handmade-business-per-day">Craftybase, 6 April 2026</a>). That is one vendor's data, not a rule.</p>
+<h3>How do I keep track of custom orders?</h3>
+<p>The same way, with the custom details in the What column or a reference to where they are written down. Time custom pieces separately: they often take longer than stock items. For pricing them, see <a href="/guides/how-to-price-custom-orders.html">how to price custom orders</a>.</p>
+<h3>Can online and craft fair orders go in one log?</h3>
+<p>Yes, and they should, because they use the same making hours. Add a column for where the order came from if you want to compare channels later.</p>
+<h3>How much busier is the holiday season?</h3>
+<p>It depends on your shop; last year's log is the most useful guide. As a rough vendor figure, Craftybase says "Q4 (October–December) typically drives 2-4x the daily volume of slower months" in its users' data. Start the log before the rush so the habit is in place when it arrives.</p>
+
+<aside class="product">
+<h2>A spreadsheet that does this for you</h2>
+<p>We make a Holiday Order Planner that follows this method. It comes pre-filled with the 2026 holiday last-shipping dates published by USPS and FedEx Ground, each with its source, and has blank rows for other carriers. Enter your hours per workday, working days, packing days and days off, add products with their making time and log orders as they come in: each order gets a start-by date and a flag (START NOW, SHIP TODAY, LATE, OK). A "Can I Take It?" sheet shows the last day you can accept a new order given the work already booked, and Weekly Load compares booked hours with your available hours week by week. It is a spreadsheet: you type orders in yourself, and it does not sync with any selling platform. It is tested in LibreOffice Calc.</p>
+<p><a class="cta" href="https://starlitdesk.gumroad.com/l/holiday-order-planner">See the Holiday Order Planner</a></p>
+</aside>
+
+<p class="scope">This guide is general planning and record-keeping information. Carrier dates are the carriers' own recommendations, not guarantees; check the carrier's website before you promise a delivery date. Example figures are invented. It is not tax, legal or financial advice.</p>
+
+<p class="ai">Written with AI tools (Anthropic's Claude) by StarlitDesk and checked by us; the worked example was calculated and checked before publishing.</p>
+</article></main>
+<footer class="site"><p><a href="/guides/">More guides</a> · <a href="/privacy.html">Privacy policy</a></p><p>Our product images are partly made with AI tools.</p><p>© 2026 StarlitDesk</p></footer>
+</div></body></html>
