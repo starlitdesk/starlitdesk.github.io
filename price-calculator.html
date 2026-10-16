@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-PMEHM+9KmqluE0/Gi5zi6cQ2JL7Oxwwi5V2rzTN2nwM='; style-src 'sha256-AgkMS+q9rVRvVrTCv+6uDa8A3yoRWtIZpvJhbEnLKA4='; img-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Handmade Price Calculator: materials, labour, fees and margin</title>
+<meta name="description" content="Free calculator for handmade sellers. Type materials, hours, hourly rate, overhead, your platform's fees and a target margin to get a suggested price with every cent shown. Works offline; nothing you type is sent anywhere.">
+<link rel="canonical" href="https://starlitdesk.github.io/price-calculator.html">
+<style>:root{--paper:#fbfaf6;--ink:#1e2430;--muted:#5e6672;--line:#dedad0;--field:#fff;--accent:#2c6a58;--tag:#efe6d2;--bad:#a3321f;color-scheme:light;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+@media (prefers-color-scheme:dark){:root{--paper:#171b21;--ink:#ebe8e1;--muted:#a2a9b3;--line:#30363f;--field:#20252d;--accent:#7cc3ad;--tag:#2a2f27;--bad:#ff8f7a;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink)}
+a{color:var(--accent)}
+.site{max-width:920px;margin:0 auto;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line)}
+.site>a{font-weight:700;text-decoration:none;color:var(--ink)}
+.site nav a{margin-left:12px}
+.app{max-width:920px;margin:0 auto;padding:20px 16px 8px;display:flex;flex-direction:column;gap:14px}
+h1{font-size:1.7rem;line-height:1.2;margin:0 0 6px}
+h2{font-size:1.15rem;margin:0 0 6px}
+.intro p{margin:0;max-width:68ch;color:var(--muted)}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.note{margin:0;padding:6px 10px;background:var(--tag);border-radius:6px;font-size:.9rem}
+.cur{font-size:.9rem;color:var(--muted);margin-left:auto}
+select,input,button{font:inherit;color:inherit}
+select{background:var(--field);border:1px solid var(--line);border-radius:6px;padding:4px 6px}
+form{display:flex;flex-direction:column;gap:12px}
+fieldset{border:1px solid var(--line);border-radius:10px;margin:0;padding:8px 12px 10px;display:flex;flex-direction:column;gap:8px;min-width:0}
+legend{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:0 4px}
+.row{display:grid;grid-template-columns:1fr 24px 110px;align-items:center;gap:6px}
+.row label{min-width:0}
+.unit{color:var(--muted);text-align:right;font-size:.9rem}
+input{width:100%;background:var(--field);border:1px solid var(--line);border-radius:6px;padding:6px 8px;text-align:right;font-variant-numeric:tabular-nums}
+input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+input[aria-invalid="true"]{border-color:var(--bad)}
+.hint{margin:0;color:var(--muted);font-size:.8rem}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.cols>*{min-width:0}
+@media (max-width:640px){.cols{grid-template-columns:1fr}}
+.result{display:flex;flex-direction:column;border-radius:10px;background:var(--field);border:1px solid var(--line);padding:10px 14px}
+.price{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.price span{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.price strong{font-size:1.9rem;color:var(--accent);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.lines{margin:8px 0 0;display:flex;flex-direction:column;gap:3px}
+.lines div{display:flex;justify-content:space-between;gap:8px}
+.lines dt{color:var(--muted)}
+.lines dd{margin:0;font-variant-numeric:tabular-nums}
+.lines .sum{border-top:1px dashed var(--line);padding-top:3px;margin-bottom:4px}
+.lines .sum dt,.lines .profit dt{color:var(--ink)}
+.lines .profit dd{font-weight:600}
+.error{margin:8px 0 0;color:var(--bad);font-size:.9rem}
+.result.has-error .price strong,.result.has-error dd{color:var(--muted)}
+.actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px;flex-wrap:wrap}
+button{background:transparent;border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer}
+button:hover{border-color:var(--accent)}
+.more{border-top:1px solid var(--line);padding-top:14px}
+.more p{max-width:68ch;margin:0 0 10px}
+.product a,.ext a{font-weight:600}
+.site-foot{max-width:920px;margin:0 auto;padding:12px 16px 32px;font-size:.85rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="site"><a href="./">StarlitDesk</a><nav><a href="./">Home</a> <a href="guides/">Guides</a></nav></header>
+<main class="app">
+  <div class="intro">
+    <h1>Handmade price calculator</h1>
+    <p>Type what one item costs you to make and what your platform charges. You get a suggested price, the fees and the profit, every figure rounded half-up to the cent. It runs in this page only: nothing you type is saved or sent.</p>
+  </div>
+  <div class="bar">
+    <p id="example-note" class="note" hidden>Example values. Type your own numbers.</p>
+    <label class="cur">Currency <select id="currency">
+      <option value="$">$</option><option value="€">€</option><option value="£">£</option>
+      <option value="kr">kr</option><option value="">none</option>
+    </select></label>
+  </div>
+
+  <div class="cols">
+  <form id="form" novalidate autocomplete="off">
+    <fieldset>
+      <legend>Cost to make one item</legend>
+      <div class="row"><label for="materials">Materials</label><span class="unit" data-cur></span><input id="materials" inputmode="decimal"></div>
+      <div class="row"><label for="hours">Hours of work</label><span class="unit">h</span><input id="hours" inputmode="decimal"></div>
+      <div class="row"><label for="rate">Your hourly rate</label><span class="unit" data-cur></span><input id="rate" inputmode="decimal"></div>
+      <div class="row"><label for="overhead">Overhead</label><span class="unit">%</span><input id="overhead" inputmode="decimal"></div>
+      <p class="hint">Overhead is added to materials + labour (tools, packaging, rent share).</p>
+    </fieldset>
+    <fieldset>
+      <legend>Selling it</legend>
+      <div class="row"><label for="feePct">Platform fee</label><span class="unit">%</span><input id="feePct" inputmode="decimal"></div>
+      <div class="row"><label for="feeFixed">Fixed fee per sale</label><span class="unit" data-cur></span><input id="feeFixed" inputmode="decimal"></div>
+      <div class="row"><label for="margin">Target profit margin</label><span class="unit">%</span><input id="margin" inputmode="decimal"></div>
+      <p class="hint">Enter the fees your own platform charges. Margin is profit as a share of the price, on top of your hourly pay.</p>
+    </fieldset>
+  </form>
+
+  <section id="result" class="result" aria-live="polite">
+    <div class="price"><span>Suggested price</span><strong id="out-price">–</strong></div>
+    <dl class="lines">
+      <div><dt>Materials</dt><dd id="out-materials">–</dd></div>
+      <div><dt>Labour</dt><dd id="out-labour">–</dd></div>
+      <div><dt>Overhead</dt><dd id="out-overhead">–</dd></div>
+      <div class="sum"><dt>Cost to make</dt><dd id="out-cost">–</dd></div>
+      <div><dt id="lbl-feepct">Fee %</dt><dd id="out-feepct">–</dd></div>
+      <div><dt>Fixed fee</dt><dd id="out-feefixed">–</dd></div>
+      <div class="sum"><dt>Fees per sale</dt><dd id="out-fees">–</dd></div>
+      <div class="profit"><dt>Profit per sale</dt><dd id="out-profit">–</dd></div>
+      <div><dt>Margin at this price</dt><dd id="out-margin">–</dd></div>
+    </dl>
+    <p id="error" class="error" hidden></p>
+    <div class="actions"><button type="button" id="example">Example values</button><button type="button" id="clear">Clear all</button></div>
+  </section>
+  </div>
+
+  <section class="more">
+    <h2>How the numbers work</h2>
+    <p>Labour = hours × hourly rate. Overhead = overhead % of materials + labour. Price = (cost + fixed fee) ÷ (1 − fee % − margin %). Fees and profit are then worked out from the rounded price, so the lines always add up to what is shown. Read the <a href="guides/how-to-price-handmade-items.html">guide to pricing handmade items</a> for a worked example.</p>
+    <p class="product">Want this for every product, with your own fee table and a dashboard? <a id="product" href="https://starlitdesk.gumroad.com/l/pricing-profit-workbook" rel="noopener">See the Maker Pricing &amp; Profit Workbook</a></p>
+  </section>
+</main>
+<footer class="site-foot">
+  <p>Built by AI agents at Nightshift Labs. Not tax or financial advice. <a href="privacy.html">Privacy policy</a></p>
+</footer>
+<script type="module">// Maker Price Check: pure calculation module (no DOM, no network).
+// Money is held in integer cents; percentages in hundredths of a percent
+// (basis points, 6.5% = 650); hours in hundredths (0.75 h = 75).
+// Every rounding is half-up to the cent, and totals are computed from the
+// rounded figures that are shown.
+
+export const LIMITS = { money: 100000000, hours: 100000, pct: 10000 }; // 1,000,000.00 / 1,000 h / 100%
+
+// Half-up integer division, sign-aware (n / d rounded half away from zero).
+export function divHalfUp(n, d) {
+  if (d <= 0) throw new Error("divisor must be positive");
+  if (n < 0) return -divHalfUp(-n, d);
+  return Math.floor((2 * n + d) / (2 * d));
+}
+
+// Parse a user-typed decimal ("12", "12.5", "12,50", " 1 200.00") into an
+// integer with 2 implied decimals. Returns {ok, value} or {ok:false, error}.
+export function parseFixed2(raw) {
+  let s = String(raw ?? "").trim().replace(/[\s ]/g, "");
+  if (s === "") return { ok: true, value: 0, empty: true };
+  if (!s.includes(".") && /^\d+,\d{1,2}$/.test(s)) s = s.replace(",", ".");
+  if (/,/.test(s)) s = s.replace(/,(?=\d{3}(\D|$))/g, "");
+  if (!/^\d+(\.\d{0,2})?$/.test(s)) {
+    if (/^-/.test(s)) return { ok: false, error: "Use a number of 0 or more." };
+    if (/^\d+\.\d{3,}$/.test(s)) return { ok: false, error: "Use at most 2 decimals." };
+    return { ok: false, error: "Type a number, like 4.50." };
+  }
+  const [i, f = ""] = s.split(".");
+  const value = Number(i) * 100 + Number((f + "00").slice(0, 2));
+  if (!Number.isSafeInteger(value)) return { ok: false, error: "That number is too large." };
+  return { ok: true, value };
+}
+
+export const FIELDS = [
+  { id: "materials", kind: "money", label: "Materials" },
+  { id: "hours", kind: "hours", label: "Hours" },
+  { id: "rate", kind: "money", label: "Hourly rate" },
+  { id: "overhead", kind: "pct", label: "Overhead" },
+  { id: "feePct", kind: "pct", label: "Platform fee" },
+  { id: "feeFixed", kind: "money", label: "Fixed fee" },
+  { id: "margin", kind: "pct", label: "Target margin" }
+];
+
+// Validate raw strings -> integers. Returns {ok, values} or {ok:false, errors:{id:msg}}.
+export function readInputs(raw) {
+  const values = {}, errors = {};
+  for (const f of FIELDS) {
+    const r = parseFixed2(raw[f.id]);
+    if (!r.ok) { errors[f.id] = r.error; continue; }
+    if (r.value > LIMITS[f.kind]) {
+      errors[f.id] = f.kind === "pct" ? "Use 100% or less." : f.kind === "hours" ? "Use 1,000 hours or less." : "Use 1,000,000 or less.";
+      continue;
+    }
+    values[f.id] = r.value;
+  }
+  if (!errors.feePct && !errors.margin && values.feePct + values.margin >= 10000) {
+    errors.margin = "Fee % plus target margin must stay below 100%.";
+  }
+  return Object.keys(errors).length ? { ok: false, errors } : { ok: true, values };
+}
+
+// Core calculation. v = integers from readInputs.
+export function calculate(v) {
+  const labour = divHalfUp(v.hours * v.rate, 100);
+  const overhead = divHalfUp((v.materials + labour) * v.overhead, 10000);
+  const cost = v.materials + labour + overhead;
+  const keepShare = 10000 - v.feePct - v.margin; // > 0, guaranteed by readInputs
+  const price = divHalfUp((cost + v.feeFixed) * 10000, keepShare);
+  const feePctAmount = divHalfUp(price * v.feePct, 10000);
+  const fees = feePctAmount + v.feeFixed;
+  const profit = price - fees - cost;
+  // Margin in tenths of a percent, from the shown figures; null when price is 0.
+  const marginTenths = price > 0 ? divHalfUp(profit * 1000, price) : null;
+  return { materials: v.materials, labour, overhead, cost, price, feePctAmount, feeFixed: v.feeFixed, fees, profit, marginTenths };
+}
+
+export function formatMoney(cents, symbol = "") {
+  const neg = cents < 0;
+  const a = Math.abs(cents);
+  const whole = Math.floor(a / 100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  const s = `${whole}.${String(a % 100).padStart(2, "0")}`;
+  return (neg ? "−" : "") + (symbol ? symbol + (symbol.length > 1 ? " " : "") : "") + s;
+}
+
+export function formatPct2(bp) {
+  const s = (bp / 100).toFixed(2).replace(/\.?0+$/, "");
+  return s + "%";
+}
+
+export function formatMarginTenths(t) {
+  if (t === null) return "–";
+  const neg = t < 0, a = Math.abs(t);
+  return (neg ? "−" : "") + Math.floor(a / 10) + "." + (a % 10) + "%";
+}
+
+// ---- page code (T-430). Everything above this line is calc.js v0.1.0, unchanged. ----
+// Same inputs/outputs as the extension popup. No storage, no network.
+const EXAMPLE = { materials: "4.20", hours: "0.75", rate: "18", overhead: "10", feePct: "8", feeFixed: "0.30", margin: "25", currency: "$" };
+const $ = (id) => document.getElementById(id);
+
+function rawValues() {
+  const raw = {};
+  for (const f of FIELDS) raw[f.id] = $(f.id).value;
+  raw.currency = $("currency").value;
+  return raw;
+}
+
+function fill(values) {
+  for (const f of FIELDS) $(f.id).value = values[f.id] ?? "";
+  $("currency").value = values.currency ?? "$";
+}
+
+function setText(id, text) { $(id).textContent = text; }
+
+function render() {
+  const raw = rawValues();
+  const cur = raw.currency;
+  document.querySelectorAll("[data-cur]").forEach((el) => { el.textContent = cur; });
+  const r = readInputs(raw);
+  for (const f of FIELDS) $(f.id).removeAttribute("aria-invalid");
+  const box = $("result");
+  if (!r.ok) {
+    box.classList.add("has-error");
+    const first = FIELDS.find((f) => r.errors[f.id]);
+    for (const id of Object.keys(r.errors)) $(id).setAttribute("aria-invalid", "true");
+    $("error").textContent = `${first.label}: ${r.errors[first.id]}`;
+    $("error").hidden = false;
+    return null;
+  }
+  box.classList.remove("has-error");
+  $("error").hidden = true;
+  const c = calculate(r.values);
+  const m = (v) => formatMoney(v, cur);
+  setText("out-price", m(c.price));
+  setText("out-materials", m(c.materials));
+  setText("out-labour", m(c.labour));
+  setText("out-overhead", m(c.overhead));
+  setText("out-cost", m(c.cost));
+  setText("lbl-feepct", `Fee ${formatPct2(r.values.feePct)} of price`);
+  setText("out-feepct", m(c.feePctAmount));
+  setText("out-feefixed", m(c.feeFixed));
+  setText("out-fees", m(c.fees));
+  setText("out-profit", m(c.profit));
+  setText("out-margin", formatMarginTenths(c.marginTenths));
+  return c;
+}
+
+function onChange() { render(); $("example-note").hidden = true; }
+
+fill(EXAMPLE);
+$("example-note").hidden = false;
+render();
+$("form").addEventListener("input", onChange);
+$("form").addEventListener("submit", (e) => e.preventDefault());
+$("currency").addEventListener("change", onChange);
+$("example").addEventListener("click", () => { fill(EXAMPLE); onChange(); $("example-note").hidden = false; });
+$("clear").addEventListener("click", () => { fill({ currency: $("currency").value }); onChange(); $("materials").focus(); });
+</script>
+</body>
+</html>
